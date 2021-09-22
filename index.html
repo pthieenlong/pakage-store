@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/header.css">
+    <link rel="stylesheet" href="./src/css/footer.css">
+    <link rel="stylesheet" href="./src/css/banner.css">
+    <link rel="stylesheet" href="./src/css/product-list.css">
+
+    <!-- Importances -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="src/img/logo.png" alt="" class="logo-img">
+                    <span class="logo-name">Pakage Store</span>
+                </a>
+            </div>
+            <div class="user">
+                <div class="user-account">
+                    <a href="#" class="account-method"><i class="fas fa-user"></i> Đăng nhập</a>
+                </div>
+                <div class="user-cart">
+                    <a href="#">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Giỏ hàng</span>
+                        <span class="cart-quantity">0</span>
+                    </a>
+                    <div class="cart-tab">
+                        <div id="on-stock">
+                            <ul class="cart-items">
+                                <li class="cart-item">
+                                    <span class="item-name">product item 12345</span>
+                                    <span class="item-quantity">Số lượng: +99</span>
+                                    <span class="total-price">1,000,000,000 VNĐ</span>
+                                    <a class="btn item-remove" onclick="deleteItem(this)">X</a>
+                                </li>
+                                <li class="cart-item">
+                                    <span class="item-name">product item 12345</span>
+                                    <span class="item-quantity">Số lượng: +99</span>
+                                    <span class="total-price">1,000,000,000 VNĐ</span>
+                                    <a class="btn item-remove" onclick="deleteItem(this)">X</a>
+                                </li>
+                            </ul>
+                            <div class="cart-details">
+                                <a href="#">Xem thêm</a>
+                            </div>
+                            <table class="cart-table">
+                                <tr>
+                                    <td class="table-left"><strong>Thành tiền</strong></td>
+                                    <td class="table-right">99999999 VNĐ</td>
+                                </tr>
+                                <tr>
+                                    <td class="table-left"><strong>Tổng đơn hàng</strong></td>
+                                    <td class="text-right table-right">99999999 VNĐ</td>
+                                </tr>
+                                <tr>
+                                    <td class="table-left"><strong>Tổng tiền phải nạp thêm</strong></td>
+                                    <td class="text-right table-right">99999999 VNĐ</td>
+                                </tr>
+                            </table>
+                            <div class="cart-props">
+                                <div class="col-50">
+                                    <div id="cart-details"><a href="#">Xem chi tiết giỏ hàng</a></div>
+                                </div>
+                                <div class="col-50">
+                                    <div id="cart-add-money" href="#"><a href="#">Nạp tiền</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="no-product">
+                            Không có sản phẩm trong giỏ hàng!
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="banner">
+                <nav class="banner-nav">
+                    <ul class="banner-nav_list">
+                        <li class="banner-nav_list-item"><a href="#"><img src="./src/img/options-lines.png"
+                                    alt="cate">CATE</a>
+                            <ul class="cate-items">
+                                <li class="cate-item">
+                                    <a href="#">Action</a>
+                                </li>
+                                <li class="cate-item">
+                                    <a href="#">FPS</a>
+                                </li>
+                                <li class="cate-item">
+                                    <a href="#">RPG</a>
+                                </li>
+                                <li class="cate-item">
+                                    <a href="#">Adventure</a>
+                                </li>
+                                <li class="cate-item">
+                                    <a href="#">Sport</a>
+                                </li>
+                                <li class="cate-item">
+                                    <a href="#">Simulate</a>
+                                </li>
+                                <li class="cate-item">
+                                    <a href="#">Horror</a>
+                                </li>
+                                <li class="cate-item">
+                                    <a href="#">History</a>
+                                </li>
+                                <li class="cate-item">
+                                    <a href="#">Puzzle</a>
+                                </li>
+                                <li class="cate-item">
+                                    <a href="#">Casual</a>
+                                </li>
+                                <li class="cate-item">
+                                    <a href="#">Music</a>
+                                </li>
+                                <li class="cate-item">
+                                    <a href="#">Indie</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="banner-nav_list-item"><a href="#"><img src="./src/img/fire-flame.png"
+                                    alt="hot">HOT</a></li>
+                        <li class="banner-nav_list-item"><a href="#"><img src="./src/img/new.png" alt="new">NEW</a></li>
+                        <li class="banner-nav_list-item"><a href="#"><img src="./src/img/coupon.png" alt="sale">SALE</a>
+                        </li>
+                        <li class="banner-nav_list-item"><a href="#"><img src="./src/img/like.png" alt="best">BEST</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="banner-advertise">
+                    <button class="banner-btn banner-btn-left" onclick="pushSlides(-1)">
+                        <i class="fas fa-chevron-left fa-3x"></i>
+                    </button>
+                    <!-- <div class="slider"> -->
+                    <img src="./src/img/the-witcher-3.jpeg" alt="advertise image" class="adver-img fade">
+                    <img src="./src/img/cyperpunk.jpeg" alt="advertise image" class="adver-img fade">
+                    <img src="./src/img/gta-v.jpeg" alt="advertise image" class="adver-img fade">
+                    <!-- </div> -->
+                    <button class="banner-btn banner-btn-right" onclick="pushSlides(1)">
+                        <i class="fas fa-chevron-right fa-3x"></i>
+                    </button>
+                </div>
+                <div class="banner-event">
+                    <div class="event-item">
+                        <img src="./src/img/lunar-new-year-sale.jpeg" alt="event">
+                    </div>
+                    <div class="event-item">
+                        <img src="./src/img/summer-sale.jpeg" alt="event">
+                    </div>
+                    <div class="event-item">
+                        <img src="./src/img/winter-sale.jpeg" alt="event">
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div class="product-list">
+                <div class="product-heading">
+                    <span class="tag-name tag">Khuyến mãi</span>
+                    <span class="tag-more tag">MORE</span>
+                </div>
+                <div class="col-25">
+                    <a href="product.html">
+                        <div class="product">
+                            <img src="./src/img/product-img/banner-img.jpeg" alt="Product image" class="product-img">
+                            <div class="product-body">
+                                <p class="product-name">Product name</p>
+                                <p class="product-price">$ 100 <span class="tag tag-sale">-50%</span></p>
+                                <p class="product-sale-price">$ 50 </p>
+                                <div class="product-buy-opt">
+                                    <button href="#" class="btn buy">buy now</button>
+                                    <button href="#" class="btn add-to-card">add to cart <i class="fas fa-shopping-cart mini-cart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-25">
+                    <a href="product.html">
+                        <div class="product">
+                            <img src="./src/img/product-img/banner-img.jpeg" alt="Product image" class="product-img">
+                            <div class="product-body">
+                                <p class="product-name">Product name</p>
+                                <p class="product-price">$ 100 <span class="tag tag-sale">-50%</span></p>
+                                <p class="product-sale-price">$ 50 </p>
+                                <div class="product-buy-opt">
+                                    <button href="#" class="btn buy">buy now</button>
+                                    <button href="#" class="btn add-to-card">add to cart <i class="fas fa-shopping-cart mini-cart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-25">
+                    <a href="product.html">
+                        <div class="product">
+                            <img src="./src/img/product-img/banner-img.jpeg" alt="Product image" class="product-img">
+                            <div class="product-body">
+                                <p class="product-name">Product name</p>
+                                <p class="product-price">$ 100 <span class="tag tag-sale">-50%</span></p>
+                                <p class="product-sale-price">$ 50 </p>
+                                <div class="product-buy-opt">
+                                    <button href="#" class="btn buy">buy now</button>
+                                    <button href="#" class="btn add-to-card">add to cart <i class="fas fa-shopping-cart mini-cart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-25">
+                    <a href="product.html">
+                        <div class="product">
+                            <img src="./src/img/product-img/banner-img.jpeg" alt="Product image" class="product-img">
+                            <div class="product-body">
+                                <p class="product-name">Product name</p>
+                                <p class="product-price">$ 100 <span class="tag tag-sale">-50%</span></p>
+                                <p class="product-sale-price">$ 50 </p>
+                                <div class="product-buy-opt">
+                                    <button href="#" class="btn buy">buy now</button>
+                                    <button href="#" class="btn add-to-card">add to cart <i class="fas fa-shopping-cart mini-cart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-25">
+                    <a href="product.html">
+                        <div class="product">
+                            <img src="./src/img/product-img/banner-img.jpeg" alt="Product image" class="product-img">
+                            <div class="product-body">
+                                <p class="product-name">Product name</p>
+                                <p class="product-price">$ 100 <span class="tag tag-sale">-50%</span></p>
+                                <p class="product-sale-price">$ 50 </p>
+                                <div class="product-buy-opt">
+                                    <button href="#" class="btn buy">buy now</button>
+                                    <button href="#" class="btn add-to-card">add to cart <i class="fas fa-shopping-cart mini-cart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-25">
+                    <a href="product.html">
+                        <div class="product">
+                            <img src="./src/img/product-img/banner-img.jpeg" alt="Product image" class="product-img">
+                            <div class="product-body">
+                                <p class="product-name">Product name</p>
+                                <p class="product-price">$ 100 <span class="tag tag-sale">-50%</span></p>
+                                <p class="product-sale-price">$ 50 </p>
+                                <div class="product-buy-opt">
+                                    <button href="#" class="btn buy">buy now</button>
+                                    <button href="#" class="btn add-to-card">add to cart <i class="fas fa-shopping-cart mini-cart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-25">
+                    <a href="product.html">
+                        <div class="product">
+                            <img src="./src/img/product-img/banner-img.jpeg" alt="Product image" class="product-img">
+                            <div class="product-body">
+                                <p class="product-name">Product name</p>
+                                <p class="product-price">$ 100 <span class="tag tag-sale">-50%</span></p>
+                                <p class="product-sale-price">$ 50 </p>
+                                <div class="product-buy-opt">
+                                    <button href="#" class="btn buy">buy now</button>
+                                    <button href="#" class="btn add-to-card">add to cart <i class="fas fa-shopping-cart mini-cart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-25">
+                    <a href="product.html">
+                        <div class="product">
+                            <img src="./src/img/product-img/banner-img.jpeg" alt="Product image" class="product-img">
+                            <div class="product-body">
+                                <p class="product-name">Product name</p>
+                                <p class="product-price">$ 100 <span class="tag tag-sale">-50%</span></p>
+                                <p class="product-sale-price">$ 50 </p>
+                                <div class="product-buy-opt">
+                                    <button href="#" class="btn buy">buy now</button>
+                                    <button href="#" class="btn add-to-card">add to cart <i class="fas fa-shopping-cart mini-cart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <hr>
+            <div class="product-list">
+                <div class="product-heading">
+                    <span class="tag-name tag">Mới ra mắt</span>
+                    <span class="tag-more tag">MORE</span>
+                </div>
+                <div class="col-25">
+                    <a href="product.html">
+                        <div class="product">
+                            <img src="./src/img/product-img/banner-img.jpeg" alt="Product image" class="product-img">
+                            <div class="product-body">
+                                <p class="product-name">Product name</p>
+                                <p class="product-price">$ 100 <span class="tag tag-sale">-50%</span></p>
+                                <p class="product-sale-price">$ 50 </p>
+                                <div class="product-buy-opt">
+                                    <button href="#" class="btn buy">buy now</button>
+                                    <button href="#" class="btn add-to-card">add to cart <i class="fas fa-shopping-cart mini-cart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-25">
+                    <a href="product.html">
+                        <div class="product">
+                            <img src="./src/img/product-img/banner-img.jpeg" alt="Product image" class="product-img">
+                            <div class="product-body">
+                                <p class="product-name">Product name</p>
+                                <p class="product-price">$ 100 <span class="tag tag-sale">-50%</span></p>
+                                <p class="product-sale-price">$ 50 </p>
+                                <div class="product-buy-opt">
+                                    <button href="#" class="btn buy">buy now</button>
+                                    <button href="#" class="btn add-to-card">add to cart <i class="fas fa-shopping-cart mini-cart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-25">
+                    <a href="product.html">
+                        <div class="product">
+                            <img src="./src/img/product-img/banner-img.jpeg" alt="Product image" class="product-img">
+                            <div class="product-body">
+                                <p class="product-name">Product name</p>
+                                <p class="product-price">$ 100 <span class="tag tag-sale">-50%</span></p>
+                                <p class="product-sale-price">$ 50 </p>
+                                <div class="product-buy-opt">
+                                    <button href="#" class="btn buy">buy now</button>
+                                    <button href="#" class="btn add-to-card">add to cart <i class="fas fa-shopping-cart mini-cart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-25">
+                    <a href="product.html">
+                        <div class="product">
+                            <img src="./src/img/product-img/banner-img.jpeg" alt="Product image" class="product-img">
+                            <div class="product-body">
+                                <p class="product-name">Product name</p>
+                                <p class="product-price">$ 100 <span class="tag tag-sale">-50%</span></p>
+                                <p class="product-sale-price">$ 50 </p>
+                                <div class="product-buy-opt">
+                                    <button href="#" class="btn buy">buy now</button>
+                                    <button href="#" class="btn add-to-card">add to cart <i class="fas fa-shopping-cart mini-cart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-25">
+                    <a href="product.html">
+                        <div class="product">
+                            <img src="./src/img/product-img/banner-img.jpeg" alt="Product image" class="product-img">
+                            <div class="product-body">
+                                <p class="product-name">Product name</p>
+                                <p class="product-price">$ 100 <span class="tag tag-sale">-50%</span></p>
+                                <p class="product-sale-price">$ 50 </p>
+                                <div class="product-buy-opt">
+                                    <button href="#" class="btn buy">buy now</button>
+                                    <button href="#" class="btn add-to-card">add to cart <i class="fas fa-shopping-cart mini-cart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-25">
+                    <a href="product.html">
+                        <div class="product">
+                            <img src="./src/img/product-img/banner-img.jpeg" alt="Product image" class="product-img">
+                            <div class="product-body">
+                                <p class="product-name">Product name</p>
+                                <p class="product-price">$ 100 <span class="tag tag-sale">-50%</span></p>
+                                <p class="product-sale-price">$ 50 </p>
+                                <div class="product-buy-opt">
+                                    <button href="#" class="btn buy">buy now</button>
+                                    <button href="#" class="btn add-to-card">add to cart <i class="fas fa-shopping-cart mini-cart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-25">
+                    <a href="product.html">
+                        <div class="product">
+                            <img src="./src/img/product-img/banner-img.jpeg" alt="Product image" class="product-img">
+                            <div class="product-body">
+                                <p class="product-name">Product name</p>
+                                <p class="product-price">$ 100 <span class="tag tag-sale">-50%</span></p>
+                                <p class="product-sale-price">$ 50 </p>
+                                <div class="product-buy-opt">
+                                    <button href="#" class="btn buy">buy now</button>
+                                    <button href="#" class="btn add-to-card">add to cart <i class="fas fa-shopping-cart mini-cart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-25">
+                    <a href="product.html">
+                        <div class="product">
+                            <img src="./src/img/product-img/banner-img.jpeg" alt="Product image" class="product-img">
+                            <div class="product-body">
+                                <p class="product-name">Product name</p>
+                                <p class="product-price">$ 100 <span class="tag tag-sale">-50%</span></p>
+                                <p class="product-sale-price">$ 50 </p>
+                                <div class="product-buy-opt">
+                                    <button href="#" class="btn buy">buy now</button>
+                                    <button href="#" class="btn add-to-card">add to cart <i class="fas fa-shopping-cart mini-cart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <div class="footer">
+            <div class="footer-head">
+                <div class="col-25">
+                    <div class="service">
+                        <img src="./src/img/service1.png" alt="ten lua">
+                        <h4>Giao hàng siêu tốc</h4>
+                        <p>Hệ thống giao hàng tự động chỉ trong 3 phút</p>
+                    </div>
+                </div>
+                <div class="col-25">
+                    <div class="service">
+                        <img src="./src/img/service2.png" alt="ten lua">
+                        <h4>BẢO HÀNH NHANH CHÓNG</h4>
+                        <p>Mọi yêu cầu hỗ trợ sẽ được đội ngũ tư vấn giải quyết trực tiếp.</p>
+                    </div>
+                </div>
+                <div class="col-25">
+                    <div class="service">
+                        <img src="./src/img/service3.png" alt="ten lua">
+                        <h4>UY TÍN 5 SAO</h4>
+                        <p>Được cộng đồng bình chọn là shop game uy tín nhất VN</p>
+                    </div>
+                </div>
+                <div class="col-25">
+                    <div class="service">
+                        <img src="./src/img/service4.png" alt="ten lua">
+                        <h4>HỖ TRỢ TẬN TÌNH</h4>
+                        <p>Hệ thống hỗ trợ online liên tục từ 8h - 24h</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-body">
+                <div class="footer-body-item">
+                    <h3>pakage store</h3>
+                    <p><a href="#">Game bản quyền là gì?</a></p>
+                    <p><a href="#">Giới thiệu Pakage Store</a></p>
+                    <p><a href="#">Điều khoản dịch vụ</a></p>
+                    <p><a href="#">Chính sách bảo mật</a></p>
+                    <p><a href="#">Donate nhân viên CSKH</a></p>
+                </div>
+                <div class="footer-body-item">
+                    <h3>tài khoản</h3>
+                    <p><a href="#">Giỏ hàng</a></p>
+                    <p><a href="#">Đăng kí</a></p>
+                    <p><a href="#">Đăng nhập</a></p>
+                    <p><a href="#">Sản phẩm đã mua</a></p>
+                    <p><a href="#">Chế độ bảo hành</a></p>
+                </div>
+                <div class="footer-body-item">
+                    <h3>liên hệ</h3>
+                    <p><a href="#">Địa chỉ giao dịch trực tiếp</a></p>
+                    <p>Hotline: <a href="#">0373 188 242</a> (8:00 - 24:00)</p>
+                    <p>Email: <a href="#">longptps19740@fpt.edu.vn</a></p>
+                    <p><a href="#">Fanpage</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./src/js/slider.js"></script>
+    <script src="./src/js/minicart.js"></script>
+</body>
+
+</html>

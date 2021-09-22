@@ -1,0 +1,142 @@
+.content {
+    margin-top: 30px;
+}
+.product {
+    height: 350px;
+}
+.product-name {
+    text-transform: uppercase;
+    font-size: 35px;
+}
+.product-status {
+    color: #aaa;
+    margin-bottom: 10px;
+}
+.product-prices {
+    width: 100%;
+}
+.product-price {
+    color: red;
+    font-size: 26px;
+}
+.presale-price {
+    color: #aaa;
+    text-decoration: line-through;
+    font-size: 16px;
+}
+.tag-sale {
+    background-color: #FFF0F1;
+    opacity: 0.7;
+    border-color: red;
+    border-radius: 25px;
+    font-size: 16px;
+}
+.product-quantity {
+    height: 25px;
+    line-height: 25px;
+    /* float: left; */
+    display: inline-table;
+}
+.product-quantity > span {
+    margin-right: 20px;
+}
+.btn {
+    font-size: 16px;
+    padding: 10px 15px;
+    background-color: white;
+    transition: background-color 200ms;
+}
+.btn:hover {
+    background-color: red;
+    color: #000;
+}
+.minus-quantity {
+    border-top-left-radius: 15px;
+    border-top: 1px solid gray;
+    border-left: 1px solid gray;
+    border-bottom-left-radius: 15px;
+    border-bottom: 1px solid gray;
+}
+.add-quantity {
+    border-top-right-radius: 15px;
+    border-top: 1px solid gray;
+    border-right: 1px solid gray;
+    border-bottom-right-radius: 15px;
+    border-bottom: 1px solid gray;
+}
+#product-quantity {
+    border: 1px solid gray;
+    padding: 13px 15px 11px;
+    width: 30px;
+}
+.buy-methods {
+    margin-top: 20px;
+}
+.add-to-cart {
+    width: 40%;
+    border-radius: 15px;
+    border: 1px solid green;
+    background-color: lightgreen;
+}
+.add-to-cart:hover {
+    background-color: green;
+    color: white;
+}
+.buy-now {
+    width: 40%;
+    border-radius: 15px;
+    border: 1px solid rgb(206, 206, 27);
+    background-color: yellow;
+}
+.buy-now:hover {
+    background-color: rgb(208, 208, 33);
+    color: white;
+}
+.remind {
+    display: block;
+    margin: 10px auto;
+    background-color: #4E7EA8;
+    border-radius: 15px;
+    color: white;
+}
+.remind:hover {
+    background-color: #0b508c;
+    color: white;
+}
+.slider {
+    width: 100%;
+}
+.adver-img {
+    display: inline;
+    width: 80%;
+}
+/* .adver-images img { */
+/* } */
+.banner-btn {
+    width: 10%;
+    border: none;
+    background-color: white;
+    margin-top: 15%;
+}
+.banner-btn-left {
+    float: left;
+}
+.banner-btn-right {
+    float: right;
+}
+.banner-event {
+    margin-top: 10px;
+    width: 100%;
+    float: left;
+    margin-bottom: 20px;
+}
+.slider-lib {
+    max-width: 100%;
+}
+.slider-lib > div {
+    margin: 0 15px;
+}
+.lib-img {
+    width: 120%;
+    cursor:pointer;
+}

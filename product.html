@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/header.css">
+    <link rel="stylesheet" href="./src/css/footer.css">
+    <link rel="stylesheet" href="./src/css/product.css">
+    <!-- Importances -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="index.html">
+                <div class="logo">
+                    <img src="src/img/logo.png" alt="" class="logo-img">
+                    <span class="logo-name">Pakage Store</span>
+                </div>
+            </a>
+            <div class="user">
+                <div class="user-account">
+                    <a href="#" class="account-method"><i class="fas fa-user"></i> Đăng nhập</a>
+                </div>
+                <div class="user-cart">
+                    <a href="#">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Giỏ hàng</span>
+                        <span class="cart-quantity">0</span>
+                    </a>
+                    <div class="cart-tab">
+                        <div id="on-stock">
+                            <ul class="cart-items">
+                                <li class="cart-item">
+                                    <span class="item-name">product item 12345</span>
+                                    <span class="item-quantity">Số lượng: +99</span>
+                                    <span class="total-price">1,000,000,000 VNĐ</span>
+                                    <a class="btn item-remove" onclick="deleteItem(this)">X</a>
+                                </li>
+                                <li class="cart-item">
+                                    <span class="item-name">product item 12345</span>
+                                    <span class="item-quantity">Số lượng: +99</span>
+                                    <span class="total-price">1,000,000,000 VNĐ</span>
+                                    <a class="btn item-remove" onclick="deleteItem(this)">X</a>
+                                </li>
+                            </ul>
+                            <div class="cart-details">
+                                <a href="#">Xem thêm</a>
+                            </div>
+                            <table class="cart-table">
+                                <tr>
+                                    <td class="table-left"><strong>Thành tiền</strong></td>
+                                    <td class="table-right">99999999 VNĐ</td>
+                                </tr>
+                                <tr>
+                                    <td class="table-left"><strong>Tổng đơn hàng</strong></td>
+                                    <td class="text-right table-right">99999999 VNĐ</td>
+                                </tr>
+                                <tr>
+                                    <td class="table-left"><strong>Tổng tiền phải nạp thêm</strong></td>
+                                    <td class="text-right table-right">99999999 VNĐ</td>
+                                </tr>
+                            </table>
+                            <div class="cart-props">
+                                <div class="col-50">
+                                    <div id="cart-details"><a href="#">Xem chi tiết giỏ hàng</a></div>
+                                </div>
+                                <div class="col-50">
+                                    <div id="cart-add-money" href="#"><a href="#">Nạp tiền</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="no-product">
+                            Không có sản phẩm trong giỏ hàng!
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- <hr> -->
+        <div class="content">
+            <div class="product">
+                <div class="product-details">
+                    <div class="col-50 product-imgs">
+                        <div class="banner-advertise">
+                            <button class="banner-btn banner-btn-left" onclick="pushSlides(-1)">
+                                <i class="fas fa-chevron-left fa-3x"></i>
+                            </button>
+                            <!-- <div class="slider"> -->
+                            <img src="./src/img/the-witcher-3.jpeg" alt="advertise image" class="adver-img fade">
+                            <img src="./src/img/cyperpunk.jpeg" alt="advertise image" class="adver-img fade">
+                            <img src="./src/img/gta-v.jpeg" alt="advertise image" class="adver-img fade">
+                            <!-- </div> -->
+                            <button class="banner-btn banner-btn-right" onclick="pushSlides(1)">
+                                <i class="fas fa-chevron-right fa-3x"></i>
+                            </button>
+                            <div class="slider-lib">
+                                <div class="col-25" onclick="currentSlide(1)">
+                                    <img src="./src/img/gta-v.jpeg" alt="" class="lib-img">
+                                </div>
+                                <div class="col-25" onclick="currentSlide(2)">
+                                    <img src="./src/img/gta-v.jpeg" alt="" class="lib-img">
+                                </div>
+                                <div class="col-25" onclick="currentSlide(3)">
+                                    <img src="./src/img/gta-v.jpeg" alt="" class="lib-img">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-50 product-detail">
+                    <h1 class="product-name">
+                        Monster Hunter World
+                    </h1>
+                    <div class="product-evaluate">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div class="product-status">
+                        <h4>Tình trạng: Còn hàng!</h4>
+                    </div>
+                    <div class="product-prices">
+                        <p class="product-price">1,000,000,000 VNĐ
+                            <span class="presale-price">999,999,999 VNĐ</span><span class="tag tag-sale">-99%</span>
+                        </p>
+                    </div>
+                    <hr style="margin-top: 30px;">
+                    <div class="product-quantity">
+                        <span>Số lượng:</span>
+                        <button class="btn minus-quantity" onclick="onQuantityChange('rev');">-</button>
+                        <input type="number" name="quantity" id="product-quantity" min="1" value="1">
+                        <button class="btn add-quantity" onclick="onQuantityChange('add');">+</button>
+                    </div>
+                    <div class="buy-methods">
+                        <button class="btn add-to-cart">Thêm vào giỏ hàng</button>
+                        <button class="btn buy-now">Mua ngay</button>
+                    </div>
+                    <button class="btn remind">Nhắc tôi khi có hàng</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <hr>
+    <div class="footer">
+        <div class="footer-head">
+            <div class="col-25">
+                <div class="service">
+                    <img src="./src/img/service1.png" alt="ten lua">
+                    <h4>Giao hàng siêu tốc</h4>
+                    <p>Hệ thống giao hàng tự động chỉ trong 3 phút</p>
+                </div>
+            </div>
+            <div class="col-25">
+                <div class="service">
+                    <img src="./src/img/service2.png" alt="ten lua">
+                    <h4>BẢO HÀNH NHANH CHÓNG</h4>
+                    <p>Mọi yêu cầu hỗ trợ sẽ được đội ngũ tư vấn giải quyết trực tiếp.</p>
+                </div>
+            </div>
+            <div class="col-25">
+                <div class="service">
+                    <img src="./src/img/service3.png" alt="ten lua">
+                    <h4>UY TÍN 5 SAO</h4>
+                    <p>Được cộng đồng bình chọn là shop game uy tín nhất VN</p>
+                </div>
+            </div>
+            <div class="col-25">
+                <div class="service">
+                    <img src="./src/img/service4.png" alt="ten lua">
+                    <h4>HỖ TRỢ TẬN TÌNH</h4>
+                    <p>Hệ thống hỗ trợ online liên tục từ 8h - 24h</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-body">
+            <div class="footer-body-item">
+                <h3>pakage store</h3>
+                <p><a href="#">Game bản quyền là gì?</a></p>
+                <p><a href="#">Giới thiệu Pakage Store</a></p>
+                <p><a href="#">Điều khoản dịch vụ</a></p>
+                <p><a href="#">Chính sách bảo mật</a></p>
+                <p><a href="#">Donate nhân viên CSKH</a></p>
+            </div>
+            <div class="footer-body-item">
+                <h3>tài khoản</h3>
+                <p><a href="#">Giỏ hàng</a></p>
+                <p><a href="#">Đăng kí</a></p>
+                <p><a href="#">Đăng nhập</a></p>
+                <p><a href="#">Sản phẩm đã mua</a></p>
+                <p><a href="#">Chế độ bảo hành</a></p>
+            </div>
+            <div class="footer-body-item">
+                <h3>liên hệ</h3>
+                <p><a href="#">Địa chỉ giao dịch trực tiếp</a></p>
+                <p>Hotline: <a href="#">0373 188 242</a> (8:00 - 24:00)</p>
+                <p>Email: <a href="#">longptps19740@fpt.edu.vn</a></p>
+                <p><a href="#">Fanpage</a></p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+        const productStatusTxt = document.querySelector('.product-status');
+        const remindBtn = document.querySelector('.remind');
+        const buyBtn = document.querySelector('.buy-methods');
+        const productStatus = [1, 0];
+        function remindMethod(status) {
+            if (status === productStatus[0]) {
+                remindBtn.style.display = 'none';
+                buyBtn.style.display = 'block';
+                productStatusTxt.innerText = 'Tình trạng: Còn hàng';
+            } else if (status === productStatus[1]) {
+                remindBtn.style.display = 'block';
+                buyBtn.style.display = 'none';
+                productStatusTxt.innerText = 'Tình trạng: Hết hàng';
+            }
+        }
+        remindMethod(0);
+
+        let productQuantity = document.querySelector('#product-quantity');
+        function onQuantityChange(btn) {
+            if (btn === 'add') productQuantity.value++;
+            else if (btn === 'rev' && productQuantity.value >= 2) {
+                productQuantity.value--;
+            }
+            productQuantity.innerText = productQuantity;
+        }
+    </script>
+    <script src="./src/js/slider.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    font-family: 'Roboto', sans-serif;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+button {
+    border: none;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+hr {
+    float: right;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.container {
+    max-width: 975px;
+    margin: 0 auto;
+}
+.content {
+    margin-bottom: 20px;
+}
+.col-25 {
+  float: left;
+  width: 25%;
+}
+.tag {
+    border: 1px solid #ccc;
+    position: absolute;
+    padding: 5px;
+    margin: 0 5px;
+}
+.checked {
+    color: orange;
+}
+.fa-star:hover {
+    color: yellow;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
