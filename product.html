@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product</title>
     <link rel="stylesheet" href="./src/css/reset.css">
-    <link rel="stylesheet" href="./src/css/header.css">
     <link rel="stylesheet" href="./src/css/footer.css">
     <link rel="stylesheet" href="./src/css/product.css">
+    <link rel="stylesheet" href="./src/css/header.css">
     <!-- Importances -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,16 +21,104 @@
 
 <body>
     <div class="container">
-        <div class="header">
-            <a href="index.html">
-                <div class="logo">
-                    <img src="src/img/logo.png" alt="" class="logo-img">
-                    <span class="logo-name">Pakage Store</span>
+        <div class="modal">
+            <div class="modal-content">
+                <div class="vertical"></div>
+                <div class="modal-content-head">
+                    <div class="tabs">
+                        <button class="login-tab">Đăng nhập</button>
+                        <button class="reg-tab">Đăng ký</button>
+                    </div>
+                    <div class="modal-close">
+                        &times;
+                    </div>
                 </div>
-            </a>
+                <div class="modal-content-body">
+                    <div id="reg-tab">
+                        <div class="col-50">
+                            <div class="tab-body-left">
+                                Đăng ký để nhận được nhiều ưu đãi
+                            </div>
+                        </div>
+                        <div class="col-50">
+                            <div class="tab-body-right">
+                                <form method="POST" id="register">
+                                    <label for="name">Họ và tên:</label>
+                                    <div class="input-box">
+                                        <i class="fas fa-lock"></i>
+                                        <input type="text" name="name" id="name" placeholder="Họ và tên">
+                                    </div>
+                                    <br>
+                                    <label for="username">Tên tài khoản:</label>
+                                    <div class="input-box">
+                                        <i class="fas fa-user"></i>
+                                        <input type="text" name="username" id="username" placeholder="Tên tài khoản...">
+                                    </div>
+                                    <br>
+                                    <label for="password">Mật khẩu:</label>
+                                    <div class="input-box">
+                                        <i class="fas fa-lock"></i>
+                                        <input type="password" name="password" id="password" placeholder="Mật khẩu ...">
+                                    </div><br>
+                                    <label for="email">Địa chỉ email:</label>
+                                    <div class="input-box">
+                                        <i class="fas fa-lock"></i>
+                                        <input type="text" name="email" id="email" placeholder="Địa chỉ email">
+                                    </div>
+                                    <br>
+                                    <label for="re-password">Nhập lại mật khẩu:</label>
+                                    <div class="input-box">
+                                        <i class="fas fa-lock"></i>
+                                        <input type="password" name="re-password" id="re- password" placeholder="Mật khẩu ...">
+                                    </div>
+                                    <input type="submit" value="Đăng ký">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="login-tab">
+                        <div class="col-50">
+                            <div class="tab-body-left">
+                                Đăng nhập để nhận được nhiều ưu đãi
+                            </div>
+                        </div>
+                        <div class="col-50">
+                            <div class="tab-body-right">
+                                <form method="POST" id="login">
+                                    <label for="username">Tên tài khoản:</label>
+                                    <div class="input-box">
+                                        <i class="fas fa-user"></i>
+                                        <input type="text" name="username" id="username" placeholder="Tên tài khoản...">
+                                    </div>
+                                    <br>
+                                    <label for="password">Mật khẩu:</label>
+                                    <div class="input-box">
+                                        <i class="fas fa-lock"></i>
+                                        <input type="password" name="password" id="password" placeholder="Mật khẩu ...">
+                                    </div>
+                                    <a href="#" id="forgot-password">Bạn quên mật khẩu ?</a>
+                                    <input type="submit" value="Đăng nhập">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </div>
+        <div class="header">
+            <div class="logo">
+                <a href="index.html">
+                    <!-- <img src="src/img/logo.png" alt="" class="logo-img"> -->
+                    <span class="logo-name">Pakage Store</span>
+                </a>
+            </div>
             <div class="user">
                 <div class="user-account">
                     <a href="#" class="account-method"><i class="fas fa-user"></i> Đăng nhập</a>
+                    <ul class="user-methods">
+                        <li class="login-method method"><button id="login-btn" class="btn">Đăng nhập</button></li>
+                        <li class="reg-method method"><button id="reg-btn" class="btn">Đăng ký</button></li>
+                    </ul>
                 </div>
                 <div class="user-cart">
                     <a href="#">
@@ -242,6 +330,7 @@
         }
     </script>
     <script src="./src/js/slider.js"></script>
+    <script src="./src/js/header.js"></script>
 </body>
 
 </html>

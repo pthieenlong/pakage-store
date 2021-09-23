@@ -1,4 +1,6 @@
 .header {
+  margin: 25px 0 50px;
+
   width: 100%;
 }
 
@@ -8,35 +10,40 @@
 }
 
 .header .logo .logo-img {
-  width: 75px;
+  /* width: 75px; */
 }
 
 .header .logo .logo-name {
-  float: right;
   display: block;
   height: 75px;
-  line-height: 75px;
+  /* line-height: 75px; */
   font-size: 20px;
 }
 
 .header .user {
-  display: inline;
+  /* display:block; */
   float: right;
-  height: 75px;
-  line-height: 75px;
+  /* height: 75px; */
+  /* line-height: 75px; */
   font-size: 17px;
 }
 
 .header .user .user-account {
+  position: relative;
   display: inline;
   margin: 0 10px;
+  height: 50px;
+  padding: 20px;
 }
-
+.header .user .user-account:hover > .user-methods {
+  display: block;
+}
 .header .user .user-account span {
   margin-left: 5px;
 }
 
 .header .user .user-cart {
+  padding: 20px 0;
   display: inline;
   position: relative;
 }
@@ -53,18 +60,18 @@
   height: 0; 
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
-  border-bottom: 20px solid #555;
+  border-bottom: 20px solid #21beff;
 }
 .cart-tab {
   display: none;
   z-index: 1;
   right: 0;
-  top: 40px;
+  top: 62px;
   position: absolute;
   width: 500px;
   background-color: white;
   border-radius: 10px;
-  border: 1px solid black;
+  border: 1px solid #21beff;
   font-size: 15px;
 }
 #no-product {
@@ -160,7 +167,162 @@
 }
 
 .header .user .user-cart .cart-quantity {
-  background-color: yellow;
+  background-color: #fdd835;
   padding: 5px;
   border-radius: 25%;
+}
+.user-methods {
+  z-index: 1;
+  background-color: white;
+  border: #21beff 1px solid;
+  position: absolute;
+  left: -40px;
+  top: 60px;
+  display: none;
+}
+.user-methods::after {
+  position: absolute;
+  top: -20px;
+
+  /* left: 50%; */
+  right: 40%;
+  content: "";
+  width: 0; 
+  height: 0; 
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid #21beff;
+}
+.user-methods > .method {
+  text-align: center;
+  width: 200px;
+  line-height: 1px;
+  padding: 10px;
+}
+.method > .btn {
+  background-color: #fdd835;
+  width: 175px;
+  height: 45px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed; /* Stay in place */
+  z-index: 3; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4); 
+}
+
+/* Modal Content/Box */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: 5% auto 0; 
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%; 
+}
+
+/* The Close Button */
+.modal-close {
+  color: #aaa;
+  position: absolute;
+  right: 10px;
+  top: 0;
+  font-size: 50px;
+  font-weight: bold;
+  transition: color 200ms;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+}
+.modal-content-head {
+  margin-top: 20px;
+  width: 100%;
+  display: block;
+  float: left;
+  margin: 15px 0;
+}
+.tabs {
+  display: inline-table;
+  height: 35px;
+  float: right;
+  width: 50%;
+}
+.tabs > button {
+  display: inline-table;
+  width: 50%;
+  /* border: none; */
+  height: 35px;
+  cursor: pointer;
+  background-color: white;
+}
+.tab-active {
+  border-bottom: 3px solid #21beff;
+}
+.modal-content-body {
+  width: 100%;
+  min-height: 450px;
+}
+.col-50 {
+  width: 50%;
+  float: left;
+}
+.tab-body-right > form {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+#login-tab {
+  display: none;
+}
+#reg-tab {
+  display: none;
+}
+.input-box {
+  position: relative;
+  color: #ccc;
+}
+.input-box > i {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+}
+.input-box > input {
+  padding: 2px 30px;
+  height: 20px;
+  width: 250px 
+}
+.tab-body-right > form > a {
+  display: block;
+  padding: 15px 0;
+  color: #21beff;
+}
+.tab-body-right > form > input[type ='submit'] {
+  width: 50%;
+  padding: 10px;
+  display: block;
+  margin: 20px auto 0;
+  border: none;
+  border-radius: 15px;
+  color: white;
+  background-color: #21beff;
+}
+.vertical {
+  border-left: 0.5px solid #ccc;
+  height: 100%;
+  position:absolute;
+  top: 0;
+  left: 46%;
 }

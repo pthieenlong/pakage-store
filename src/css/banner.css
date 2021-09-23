@@ -7,7 +7,7 @@
     display: inline-table;
     width: 19%;
     font-size: 24px;
-    margin-left: 0.75%;
+    /* margin-left: 0.75%; */
 }
 .banner-nav_list-item {
     position: relative;
@@ -78,7 +78,7 @@
     width: 100%;
     float: left;
     margin-bottom: 20px;
-}
+}   
 .event-item {
     float: left;
     width: 32%;

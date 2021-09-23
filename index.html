@@ -23,16 +23,104 @@
 
 <body>
     <div class="container">
+        <div class="modal">
+            <div class="modal-content">
+                <div class="vertical"></div>
+                <div class="modal-content-head">
+                    <div class="tabs">
+                        <button class="login-tab">Đăng nhập</button>
+                        <button class="reg-tab">Đăng ký</button>
+                    </div>
+                    <div class="modal-close">
+                        &times;
+                    </div>
+                </div>
+                <div class="modal-content-body">
+                    <div id="reg-tab">
+                        <div class="col-50">
+                            <div class="tab-body-left">
+                                Đăng ký để nhận được nhiều ưu đãi
+                            </div>
+                        </div>
+                        <div class="col-50">
+                            <div class="tab-body-right">
+                                <form method="POST" id="register">
+                                    <label for="name">Họ và tên:</label>
+                                    <div class="input-box">
+                                        <i class="fas fa-lock"></i>
+                                        <input type="text" name="name" id="name" placeholder="Họ và tên">
+                                    </div>
+                                    <br>
+                                    <label for="username">Tên tài khoản:</label>
+                                    <div class="input-box">
+                                        <i class="fas fa-user"></i>
+                                        <input type="text" name="username" id="username" placeholder="Tên tài khoản...">
+                                    </div>
+                                    <br>
+                                    <label for="password">Mật khẩu:</label>
+                                    <div class="input-box">
+                                        <i class="fas fa-lock"></i>
+                                        <input type="password" name="password" id="password" placeholder="Mật khẩu ...">
+                                    </div><br>
+                                    <label for="email">Địa chỉ email:</label>
+                                    <div class="input-box">
+                                        <i class="fas fa-lock"></i>
+                                        <input type="text" name="email" id="email" placeholder="Địa chỉ email">
+                                    </div>
+                                    <br>
+                                    <label for="re-password">Nhập lại mật khẩu:</label>
+                                    <div class="input-box">
+                                        <i class="fas fa-lock"></i>
+                                        <input type="password" name="re-password" id="re- password" placeholder="Mật khẩu ...">
+                                    </div>
+                                    <input type="submit" value="Đăng ký">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="login-tab">
+                        <div class="col-50">
+                            <div class="tab-body-left">
+                                Đăng nhập để nhận được nhiều ưu đãi
+                            </div>
+                        </div>
+                        <div class="col-50">
+                            <div class="tab-body-right">
+                                <form method="POST" id="login">
+                                    <label for="username">Tên tài khoản:</label>
+                                    <div class="input-box">
+                                        <i class="fas fa-user"></i>
+                                        <input type="text" name="username" id="username" placeholder="Tên tài khoản...">
+                                    </div>
+                                    <br>
+                                    <label for="password">Mật khẩu:</label>
+                                    <div class="input-box">
+                                        <i class="fas fa-lock"></i>
+                                        <input type="password" name="password" id="password" placeholder="Mật khẩu ...">
+                                    </div>
+                                    <a href="#" id="forgot-password">Bạn quên mật khẩu ?</a>
+                                    <input type="submit" value="Đăng nhập">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </div>
         <div class="header">
             <div class="logo">
                 <a href="index.html">
-                    <img src="src/img/logo.png" alt="" class="logo-img">
+                    <!-- <img src="src/img/logo.png" alt="" class="logo-img"> -->
                     <span class="logo-name">Pakage Store</span>
                 </a>
             </div>
             <div class="user">
                 <div class="user-account">
                     <a href="#" class="account-method"><i class="fas fa-user"></i> Đăng nhập</a>
+                    <ul class="user-methods">
+                        <li class="login-method method"><button id="login-btn" class="btn">Đăng nhập</button></li>
+                        <li class="reg-method method"><button id="reg-btn" class="btn">Đăng ký</button></li>
+                    </ul>
                 </div>
                 <div class="user-cart">
                     <a href="#">
@@ -176,20 +264,38 @@
                     <span class="tag-more tag">MORE</span>
                 </div>
                 <div class="col-25">
-                    <a href="product.html">
-                        <div class="product">
+                    <div class="product">
+                        <a href="product.html">
                             <img src="./src/img/product-img/banner-img.jpeg" alt="Product image" class="product-img">
                             <div class="product-body">
                                 <p class="product-name">Product name</p>
                                 <p class="product-price">$ 100 <span class="tag tag-sale">-50%</span></p>
                                 <p class="product-sale-price">$ 50 </p>
-                                <div class="product-buy-opt">
-                                    <button href="#" class="btn buy">buy now</button>
-                                    <button href="#" class="btn add-to-card">add to cart <i class="fas fa-shopping-cart mini-cart"></i></button>
-                                </div>
                             </div>
+                        </a>
+                        <div class="product-buy-opt">
+                            <button class="btn buy">buy now</button>
+                            <button class="btn add-to-card">add to cart <i
+                                    class="fas fa-shopping-cart mini-cart"></i></button>
                         </div>
-                    </a>
+                    </div>
+                </div>
+                <div class="col-25">
+                    <div class="product">
+                        <a href="product.html">
+                            <img src="./src/img/product-img/banner-img.jpeg" alt="Product image" class="product-img">
+                            <div class="product-body">
+                                <p class="product-name">Product name</p>
+                                <p class="product-price">$ 100 <span class="tag tag-sale">-50%</span></p>
+                                <p class="product-sale-price">$ 50 </p>
+                            </div>
+                        </a>
+                        <div class="product-buy-opt">
+                            <button class="btn buy">buy now</button>
+                            <button class="btn add-to-card">add to cart <i
+                                    class="fas fa-shopping-cart mini-cart"></i></button>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-25">
                     <a href="product.html">
@@ -199,109 +305,99 @@
                                 <p class="product-name">Product name</p>
                                 <p class="product-price">$ 100 <span class="tag tag-sale">-50%</span></p>
                                 <p class="product-sale-price">$ 50 </p>
-                                <div class="product-buy-opt">
-                                    <button href="#" class="btn buy">buy now</button>
-                                    <button href="#" class="btn add-to-card">add to cart <i class="fas fa-shopping-cart mini-cart"></i></button>
-                                </div>
+                            </div>
+                            <div class="product-buy-opt">
+                                <button href="#" class="btn buy">buy now</button>
+                                <button href="#" class="btn add-to-card">add to cart <i
+                                        class="fas fa-shopping-cart mini-cart"></i></button>
                             </div>
                         </div>
                     </a>
                 </div>
                 <div class="col-25">
-                    <a href="product.html">
-                        <div class="product">
+                    <div class="product">
+                        <a href="product.html">
                             <img src="./src/img/product-img/banner-img.jpeg" alt="Product image" class="product-img">
                             <div class="product-body">
                                 <p class="product-name">Product name</p>
                                 <p class="product-price">$ 100 <span class="tag tag-sale">-50%</span></p>
                                 <p class="product-sale-price">$ 50 </p>
-                                <div class="product-buy-opt">
-                                    <button href="#" class="btn buy">buy now</button>
-                                    <button href="#" class="btn add-to-card">add to cart <i class="fas fa-shopping-cart mini-cart"></i></button>
-                                </div>
                             </div>
+                        </a>
+                        <div class="product-buy-opt">
+                            <button class="btn buy">buy now</button>
+                            <button class="btn add-to-card">add to cart <i
+                                    class="fas fa-shopping-cart mini-cart"></i></button>
                         </div>
-                    </a>
+                    </div>
                 </div>
                 <div class="col-25">
-                    <a href="product.html">
-                        <div class="product">
+                    <div class="product">
+                        <a href="product.html">
                             <img src="./src/img/product-img/banner-img.jpeg" alt="Product image" class="product-img">
                             <div class="product-body">
                                 <p class="product-name">Product name</p>
                                 <p class="product-price">$ 100 <span class="tag tag-sale">-50%</span></p>
                                 <p class="product-sale-price">$ 50 </p>
-                                <div class="product-buy-opt">
-                                    <button href="#" class="btn buy">buy now</button>
-                                    <button href="#" class="btn add-to-card">add to cart <i class="fas fa-shopping-cart mini-cart"></i></button>
-                                </div>
                             </div>
+                        </a>
+                        <div class="product-buy-opt">
+                            <button class="btn buy">buy now</button>
+                            <button class="btn add-to-card">add to cart <i
+                                    class="fas fa-shopping-cart mini-cart"></i></button>
                         </div>
-                    </a>
+                    </div>
                 </div>
                 <div class="col-25">
-                    <a href="product.html">
-                        <div class="product">
+                    <div class="product">
+                        <a href="product.html">
                             <img src="./src/img/product-img/banner-img.jpeg" alt="Product image" class="product-img">
                             <div class="product-body">
                                 <p class="product-name">Product name</p>
                                 <p class="product-price">$ 100 <span class="tag tag-sale">-50%</span></p>
                                 <p class="product-sale-price">$ 50 </p>
-                                <div class="product-buy-opt">
-                                    <button href="#" class="btn buy">buy now</button>
-                                    <button href="#" class="btn add-to-card">add to cart <i class="fas fa-shopping-cart mini-cart"></i></button>
-                                </div>
                             </div>
+                        </a>
+                        <div class="product-buy-opt">
+                            <button class="btn buy">buy now</button>
+                            <button class="btn add-to-card">add to cart <i
+                                    class="fas fa-shopping-cart mini-cart"></i></button>
                         </div>
-                    </a>
+                    </div>
                 </div>
                 <div class="col-25">
-                    <a href="product.html">
-                        <div class="product">
+                    <div class="product">
+                        <a href="product.html">
                             <img src="./src/img/product-img/banner-img.jpeg" alt="Product image" class="product-img">
                             <div class="product-body">
                                 <p class="product-name">Product name</p>
                                 <p class="product-price">$ 100 <span class="tag tag-sale">-50%</span></p>
                                 <p class="product-sale-price">$ 50 </p>
-                                <div class="product-buy-opt">
-                                    <button href="#" class="btn buy">buy now</button>
-                                    <button href="#" class="btn add-to-card">add to cart <i class="fas fa-shopping-cart mini-cart"></i></button>
-                                </div>
                             </div>
+                        </a>
+                        <div class="product-buy-opt">
+                            <button class="btn buy">buy now</button>
+                            <button class="btn add-to-card">add to cart <i
+                                    class="fas fa-shopping-cart mini-cart"></i></button>
                         </div>
-                    </a>
+                    </div>
                 </div>
                 <div class="col-25">
-                    <a href="product.html">
-                        <div class="product">
+                    <div class="product">
+                        <a href="product.html">
                             <img src="./src/img/product-img/banner-img.jpeg" alt="Product image" class="product-img">
                             <div class="product-body">
                                 <p class="product-name">Product name</p>
                                 <p class="product-price">$ 100 <span class="tag tag-sale">-50%</span></p>
                                 <p class="product-sale-price">$ 50 </p>
-                                <div class="product-buy-opt">
-                                    <button href="#" class="btn buy">buy now</button>
-                                    <button href="#" class="btn add-to-card">add to cart <i class="fas fa-shopping-cart mini-cart"></i></button>
-                                </div>
                             </div>
+                        </a>
+                        <div class="product-buy-opt">
+                            <button class="btn buy">buy now</button>
+                            <button class="btn add-to-card">add to cart <i
+                                    class="fas fa-shopping-cart mini-cart"></i></button>
                         </div>
-                    </a>
-                </div>
-                <div class="col-25">
-                    <a href="product.html">
-                        <div class="product">
-                            <img src="./src/img/product-img/banner-img.jpeg" alt="Product image" class="product-img">
-                            <div class="product-body">
-                                <p class="product-name">Product name</p>
-                                <p class="product-price">$ 100 <span class="tag tag-sale">-50%</span></p>
-                                <p class="product-sale-price">$ 50 </p>
-                                <div class="product-buy-opt">
-                                    <button href="#" class="btn buy">buy now</button>
-                                    <button href="#" class="btn add-to-card">add to cart <i class="fas fa-shopping-cart mini-cart"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
+                    </div>
                 </div>
             </div>
             <hr>
@@ -311,132 +407,140 @@
                     <span class="tag-more tag">MORE</span>
                 </div>
                 <div class="col-25">
-                    <a href="product.html">
-                        <div class="product">
+                    <div class="product">
+                        <a href="product.html">
                             <img src="./src/img/product-img/banner-img.jpeg" alt="Product image" class="product-img">
                             <div class="product-body">
                                 <p class="product-name">Product name</p>
                                 <p class="product-price">$ 100 <span class="tag tag-sale">-50%</span></p>
                                 <p class="product-sale-price">$ 50 </p>
-                                <div class="product-buy-opt">
-                                    <button href="#" class="btn buy">buy now</button>
-                                    <button href="#" class="btn add-to-card">add to cart <i class="fas fa-shopping-cart mini-cart"></i></button>
-                                </div>
                             </div>
+                        </a>
+                        <div class="product-buy-opt">
+                            <button class="btn buy">buy now</button>
+                            <button class="btn add-to-card">add to cart <i
+                                    class="fas fa-shopping-cart mini-cart"></i></button>
                         </div>
-                    </a>
+                    </div>
                 </div>
                 <div class="col-25">
-                    <a href="product.html">
-                        <div class="product">
+                    <div class="product">
+                        <a href="product.html">
                             <img src="./src/img/product-img/banner-img.jpeg" alt="Product image" class="product-img">
                             <div class="product-body">
                                 <p class="product-name">Product name</p>
                                 <p class="product-price">$ 100 <span class="tag tag-sale">-50%</span></p>
                                 <p class="product-sale-price">$ 50 </p>
-                                <div class="product-buy-opt">
-                                    <button href="#" class="btn buy">buy now</button>
-                                    <button href="#" class="btn add-to-card">add to cart <i class="fas fa-shopping-cart mini-cart"></i></button>
-                                </div>
                             </div>
+                        </a>
+                        <div class="product-buy-opt">
+                            <button class="btn buy">buy now</button>
+                            <button class="btn add-to-card">add to cart <i
+                                    class="fas fa-shopping-cart mini-cart"></i></button>
                         </div>
-                    </a>
+                    </div>
                 </div>
                 <div class="col-25">
-                    <a href="product.html">
-                        <div class="product">
+                    <div class="product">
+                        <a href="product.html">
                             <img src="./src/img/product-img/banner-img.jpeg" alt="Product image" class="product-img">
                             <div class="product-body">
                                 <p class="product-name">Product name</p>
                                 <p class="product-price">$ 100 <span class="tag tag-sale">-50%</span></p>
                                 <p class="product-sale-price">$ 50 </p>
-                                <div class="product-buy-opt">
-                                    <button href="#" class="btn buy">buy now</button>
-                                    <button href="#" class="btn add-to-card">add to cart <i class="fas fa-shopping-cart mini-cart"></i></button>
-                                </div>
                             </div>
+                        </a>
+                        <div class="product-buy-opt">
+                            <button class="btn buy">buy now</button>
+                            <button class="btn add-to-card">add to cart <i
+                                    class="fas fa-shopping-cart mini-cart"></i></button>
                         </div>
-                    </a>
+                    </div>
                 </div>
                 <div class="col-25">
-                    <a href="product.html">
-                        <div class="product">
+                    <div class="product">
+                        <a href="product.html">
                             <img src="./src/img/product-img/banner-img.jpeg" alt="Product image" class="product-img">
                             <div class="product-body">
                                 <p class="product-name">Product name</p>
                                 <p class="product-price">$ 100 <span class="tag tag-sale">-50%</span></p>
                                 <p class="product-sale-price">$ 50 </p>
-                                <div class="product-buy-opt">
-                                    <button href="#" class="btn buy">buy now</button>
-                                    <button href="#" class="btn add-to-card">add to cart <i class="fas fa-shopping-cart mini-cart"></i></button>
-                                </div>
                             </div>
+                        </a>
+                        <div class="product-buy-opt">
+                            <button class="btn buy">buy now</button>
+                            <button class="btn add-to-card">add to cart <i
+                                    class="fas fa-shopping-cart mini-cart"></i></button>
                         </div>
-                    </a>
+                    </div>
                 </div>
                 <div class="col-25">
-                    <a href="product.html">
-                        <div class="product">
+                    <div class="product">
+                        <a href="product.html">
                             <img src="./src/img/product-img/banner-img.jpeg" alt="Product image" class="product-img">
                             <div class="product-body">
                                 <p class="product-name">Product name</p>
                                 <p class="product-price">$ 100 <span class="tag tag-sale">-50%</span></p>
                                 <p class="product-sale-price">$ 50 </p>
-                                <div class="product-buy-opt">
-                                    <button href="#" class="btn buy">buy now</button>
-                                    <button href="#" class="btn add-to-card">add to cart <i class="fas fa-shopping-cart mini-cart"></i></button>
-                                </div>
                             </div>
+                        </a>
+                        <div class="product-buy-opt">
+                            <button class="btn buy">buy now</button>
+                            <button class="btn add-to-card">add to cart <i
+                                    class="fas fa-shopping-cart mini-cart"></i></button>
                         </div>
-                    </a>
+                    </div>
                 </div>
                 <div class="col-25">
-                    <a href="product.html">
-                        <div class="product">
+                    <div class="product">
+                        <a href="product.html">
                             <img src="./src/img/product-img/banner-img.jpeg" alt="Product image" class="product-img">
                             <div class="product-body">
                                 <p class="product-name">Product name</p>
                                 <p class="product-price">$ 100 <span class="tag tag-sale">-50%</span></p>
                                 <p class="product-sale-price">$ 50 </p>
-                                <div class="product-buy-opt">
-                                    <button href="#" class="btn buy">buy now</button>
-                                    <button href="#" class="btn add-to-card">add to cart <i class="fas fa-shopping-cart mini-cart"></i></button>
-                                </div>
                             </div>
+                        </a>
+                        <div class="product-buy-opt">
+                            <button class="btn buy">buy now</button>
+                            <button class="btn add-to-card">add to cart <i
+                                    class="fas fa-shopping-cart mini-cart"></i></button>
                         </div>
-                    </a>
+                    </div>
                 </div>
                 <div class="col-25">
-                    <a href="product.html">
-                        <div class="product">
+                    <div class="product">
+                        <a href="product.html">
                             <img src="./src/img/product-img/banner-img.jpeg" alt="Product image" class="product-img">
                             <div class="product-body">
                                 <p class="product-name">Product name</p>
                                 <p class="product-price">$ 100 <span class="tag tag-sale">-50%</span></p>
                                 <p class="product-sale-price">$ 50 </p>
-                                <div class="product-buy-opt">
-                                    <button href="#" class="btn buy">buy now</button>
-                                    <button href="#" class="btn add-to-card">add to cart <i class="fas fa-shopping-cart mini-cart"></i></button>
-                                </div>
                             </div>
+                        </a>
+                        <div class="product-buy-opt">
+                            <button class="btn buy">buy now</button>
+                            <button class="btn add-to-card">add to cart <i
+                                    class="fas fa-shopping-cart mini-cart"></i></button>
                         </div>
-                    </a>
+                    </div>
                 </div>
                 <div class="col-25">
-                    <a href="product.html">
-                        <div class="product">
+                    <div class="product">
+                        <a href="product.html">
                             <img src="./src/img/product-img/banner-img.jpeg" alt="Product image" class="product-img">
                             <div class="product-body">
                                 <p class="product-name">Product name</p>
                                 <p class="product-price">$ 100 <span class="tag tag-sale">-50%</span></p>
                                 <p class="product-sale-price">$ 50 </p>
-                                <div class="product-buy-opt">
-                                    <button href="#" class="btn buy">buy now</button>
-                                    <button href="#" class="btn add-to-card">add to cart <i class="fas fa-shopping-cart mini-cart"></i></button>
-                                </div>
                             </div>
+                        </a>
+                        <div class="product-buy-opt">
+                            <button class="btn buy">buy now</button>
+                            <button class="btn add-to-card">add to cart <i
+                                    class="fas fa-shopping-cart mini-cart"></i></button>
                         </div>
-                    </a>
+                    </div>
                 </div>
             </div>
             <hr>
@@ -501,6 +605,7 @@
     </div>
     <script src="./src/js/slider.js"></script>
     <script src="./src/js/minicart.js"></script>
+    <script src="./src/js/header.js"></script>
 </body>
 
 </html>
