@@ -1,7 +1,15 @@
+header {
+  background-color: #017fff;
+  max-height: 75px;
+  margin-bottom: 50px;
+}
 .header {
-  margin: 25px 0 50px;
-
-  width: 100%;
+  padding: 25px 0 0;
+  margin: 0 auto ;
+  max-width: 975px;
+}
+.header a {
+  color: white;
 }
 
 .header .logo {
@@ -16,7 +24,6 @@
 .header .logo .logo-name {
   display: block;
   height: 75px;
-  /* line-height: 75px; */
   font-size: 20px;
 }
 
@@ -60,7 +67,7 @@
   height: 0; 
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
-  border-bottom: 20px solid #21beff;
+  border-bottom: 20px solid #fff;
 }
 .cart-tab {
   display: none;
@@ -78,8 +85,10 @@
   text-align: center;
 }
 .cart-item {
-  /* height: 20px; */
-  padding: 0 10px;
+  line-height: 50px;
+  display: block;
+  margin: 0 10px;
+  border-bottom: 1px solid #ccc;
 }
 .cart-item span {
   height: 50px;
@@ -191,7 +200,7 @@
   height: 0; 
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
-  border-bottom: 20px solid #21beff;
+  border-bottom: 20px solid #fff;
 }
 .user-methods > .method {
   text-align: center;
