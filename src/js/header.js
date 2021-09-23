@@ -12,13 +12,11 @@ const activeTab = 'tab-active';
 
 function reset() {
     modal.style.display = 'none';
-    // userMethods.style.display = 'none';
     regTab.style.display = 'none';
     loginTab.style.display = 'none';
 }
 loginBtn.onclick = () => {
     modal.style.display = 'block';
-    // userMethods.style.display = 'none';
     loginHeadBtn.classList.add(activeTab);
     regHeadBtn.classList.remove(activeTab);
     loginTab.style.display = 'block';
@@ -27,7 +25,6 @@ loginBtn.onclick = () => {
 
 regBtn.onclick = () => {
     modal.style.display = 'block';
-    // userMethods.style.display = 'none';
     regHeadBtn.classList.add(activeTab);
     loginHeadBtn.classList.remove(activeTab);
     regTab.style.display = 'block';

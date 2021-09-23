@@ -1,0 +1,105 @@
+.content {
+    height: 50vh;
+    /* padding-bottom: 15px; */
+}
+.user-function {
+    width: 25%;
+    float: left;
+}
+.functions {
+}
+.function {
+    background-color: #aaa;
+    padding: 15px;
+}
+.function:hover {
+    cursor: pointer;
+}
+.function:first-child > .function-icon {
+    margin-left: 15px;
+}
+.function-icon {
+    float: left;
+    text-align: center;
+}
+.function-title {
+    margin-left: 55px;
+    font-size: 12px;
+}
+.function-active {
+    background-color: #f7f7f7;
+}
+.user-container {
+    float: left;
+    max-width: 730px;
+    background-color: #f7f7f7;
+}
+.user-content {
+    width: 700px;
+    margin: 0 15px;
+}
+.content-heading {
+    margin-top: 15px;
+    font-size: 24px;
+}
+.content-body {
+    margin: 15px 0;
+    font-size: 15px;
+}
+#user-info {
+    /* display: none; */
+}
+.user-info {
+    line-height: 40px;
+    margin-bottom: 20px;
+}
+.user-info > input {
+    float: right;
+    margin-right: 220px;
+    width: 300px;
+    height: 25px;
+    padding: 3px 15px;
+}
+#edit-btn {
+    padding: 15px 55px;
+    display: block;
+    margin: auto;
+    background-color: #4E7EA8;
+    border-radius: 15px;
+    color: white;
+}
+#edit-btn:hover {
+    cursor: pointer;
+    background-color: #0b508c;
+    color: white;
+}
+#cart-info {
+    display: none;
+}
+.cart-info-table thead > tr > th {
+    padding: 10px 0;
+}
+.cart-info-table tr > td {
+    max-width: 200px;
+    padding: 10px;
+    line-height: 1.5px;
+    overflow: hidden;
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.detail-btn {
+    padding: 10px;
+    background-color: #4E7EA8;
+    color: white;
+    border-radius: 5px;
+}
+.detail-btn:hover {
+    background-color: #0b508c;
+    cursor: pointer;
+}
+.info-msg {
+    display: none;
+    width: 100%;
+    font-size: 20px;
+}

@@ -40,7 +40,7 @@
 .product-quantity > span {
     margin-right: 20px;
 }
-.btn {
+.product-quantity > .btn {
     font-size: 16px;
     padding: 10px 15px;
     background-color: white;
@@ -93,13 +93,15 @@
     color: white;
 }
 .remind {
+    padding: 15px 35px;
     display: block;
-    margin: 10px auto;
+    margin: 15px auto;
     background-color: #4E7EA8;
     border-radius: 15px;
     color: white;
 }
 .remind:hover {
+    cursor: pointer;
     background-color: #0b508c;
     color: white;
 }

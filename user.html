@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product</title>
+    <title>User</title>
+    
     <link rel="stylesheet" href="./src/css/reset.css">
     <link rel="stylesheet" href="./src/css/footer.css">
-    <link rel="stylesheet" href="./src/css/product.css">
+    <link rel="stylesheet" href="./src/css/user.css">
     <link rel="stylesheet" href="./src/css/header.css">
     <!-- Importances -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -69,7 +70,8 @@
                                 <label for="re-password">Nhập lại mật khẩu:</label>
                                 <div class="input-box">
                                     <i class="fas fa-lock"></i>
-                                    <input type="password" name="re-password" id="re- password" placeholder="Mật khẩu ...">
+                                    <input type="password" name="re-password" id="re- password"
+                                        placeholder="Mật khẩu ...">
                                 </div>
                                 <input type="submit" value="Đăng ký">
                             </form>
@@ -103,7 +105,7 @@
                     </div>
                 </div>
             </div>
-        </div>            
+        </div>
     </div>
     <header>
         <div class="header">
@@ -173,80 +175,118 @@
                             Không có sản phẩm trong giỏ hàng!
                         </div>
                     </div>
-        
+
                 </div>
             </div>
         </div>
     </header>
     <div class="container">
-        <!-- <hr> -->
         <div class="content">
-            <div class="product">
-                <div class="product-details">
-                    <div class="col-50 product-imgs">
-                        <div class="banner-advertise">
-                            <button class="banner-btn banner-btn-left" onclick="pushSlides(-1)">
-                                <i class="fas fa-chevron-left fa-3x"></i>
-                            </button>
-                            <!-- <div class="slider"> -->
-                            <img src="./src/img/the-witcher-3.jpeg" alt="advertise image" class="adver-img fade">
-                            <img src="./src/img/cyperpunk.jpeg" alt="advertise image" class="adver-img fade">
-                            <img src="./src/img/gta-v.jpeg" alt="advertise image" class="adver-img fade">
-                            <!-- </div> -->
-                            <button class="banner-btn banner-btn-right" onclick="pushSlides(1)">
-                                <i class="fas fa-chevron-right fa-3x"></i>
-                            </button>
-                            <div class="slider-lib">
-                                <div class="col-25" onclick="currentSlide(1)">
-                                    <img src="./src/img/gta-v.jpeg" alt="" class="lib-img">
-                                </div>
-                                <div class="col-25" onclick="currentSlide(2)">
-                                    <img src="./src/img/gta-v.jpeg" alt="" class="lib-img">
-                                </div>
-                                <div class="col-25" onclick="currentSlide(3)">
-                                    <img src="./src/img/gta-v.jpeg" alt="" class="lib-img">
-                                </div>
-                            </div>
+            <div class="user-function">
+                <ul class="functions">
+                    <li class="function function-active" id="user">
+                        <div class="function-icon">
+                            <i class="fas fa-info fa-2x"></i>
+                        </div>
+                        <div class="function-title">
+                            <h3>Thông tin cá nhân</h3>
+                            <p>Quản lí thông tin cá nhân</p>
+                        </div>
+                    </li>
+                    <li class="function" id="cart">
+                        <div class="function-icon"><i class="fas fa-shopping-cart fa-2x" style="color: #F4B845;"></i></div>
+                        <div class="function-title">
+                            <h3>Quản lí đơn hàng</h3>
+                            <p>Quản lí thông tin sản phẩm đã mua</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="user-container">
+                <div id="user-info" class="user-content">
+                    <h3 class="content-heading">Thông tin cá nhân</h3>
+                    <hr>
+                    <div class="content-body">
+                        <form class="user-info">
+                            <label for="name">Họ tên</label>
+                            <input type="text" name="name" value="Phạm Thiên Long" disabled>
+                            <br>
+                            <label for="username">Tên tài khoản</label>
+                            <input type="text" name="username" value="pthieenlong" disabled>
+                            <br>
+                            <label for="email">Email</label>
+                            <input type="text" name="email" value="longptps19740@fpt.edu.vn" disabled>
+                            <br>
+                            <label for="phone">Số điện thoại</label>
+                            <input type="text" name="phone" value="0 000 000 000" disabled>
+                        </form>
+                        <button id="edit-btn">Cập nhật</button>
+                    </div>
+                </div>
+                <div id="cart-info" class="user-content">
+                    <h3 class="content-heading">Thông tin đơn hàng</h3>
+                    <hr>
+                    <div class="content-body">
+                        <div class="info-msg">
+                            <p>
+                                Bạn chưa mua hàng!
+                            </p>
+                        </div>
+                        <div class="cart-info" >
+                            <table class="cart-info-table">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 25%;">Ngày tạo</th>
+                                        <th style="width: 15%;">Mã đơn hàng</th>
+                                        <th style="width: 30%;">Tên sản phẩm</th>
+                                        <th style="width: 15%;">Tổng cộng</th>
+                                        <th style="width: 15%;">Hành động</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    <tr>
+                                        <td>99:99:99 - 99/99/9999</td>
+                                        <td>9999999</td>
+                                        <td>Tên sản phẩm này rất là dài, xin vui lòng bấm xem chi tiết</td>
+                                        <td>99999999</td>
+                                        <td><button class="detail-btn">Xem chi tiết</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            99:99:99 - 99/99/9999
+                                        </td>
+                                        <td>9999999</td>
+                                        <td>Tên sản phẩm này rất là dài, xin vui lòng bấm xem chi tiết</td>
+                                        <td>99999999</td>
+                                        <td><button class="detail-btn">Xem chi tiết</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            99:99:99 - 99/99/9999
+                                        </td>
+                                        <td>9999999</td>
+                                        <td>Tên sản phẩm này rất là dài, xin vui lòng bấm xem chi tiết</td>
+                                        <td>99999999</td>
+                                        <td><button class="detail-btn">Xem chi tiết</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            99:99:99 - 99/99/9999
+                                        </td>
+                                        <td>9999999</td>
+                                        <td>Tên sản phẩm này rất là dài, xin vui lòng bấm xem chi tiết</td>
+                                        <td>99999999</td>
+                                        <td><button class="detail-btn">Xem chi tiết</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
-                <div class="col-50 product-detail">
-                    <h1 class="product-name">
-                        Monster Hunter World
-                    </h1>
-                    <div class="product-evaluate">
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
-                    </div>
-                    <div class="product-status">
-                        <h4>Tình trạng: Còn hàng!</h4>
-                    </div>
-                    <div class="product-prices">
-                        <p class="product-price">1,000,000,000 VNĐ
-                            <span class="presale-price">999,999,999 VNĐ</span><span class="tag tag-sale">-99%</span>
-                        </p>
-                    </div>
-                    <hr style="margin-top: 30px;">
-                    <div class="product-quantity">
-                        <span>Số lượng:</span>
-                        <button class="btn minus-quantity" onclick="onQuantityChange('rev');">-</button>
-                        <input type="number" name="quantity" id="product-quantity" min="1" value="1">
-                        <button class="btn add-quantity" onclick="onQuantityChange('add');">+</button>
-                    </div>
-                    <div class="buy-methods">
-                        <button class="btn add-to-cart">Thêm vào giỏ hàng</button>
-                        <button class="btn buy-now">Mua ngay</button>
-                    </div>
-                    <button class="btn remind">Nhắc tôi khi có hàng</button>
-                </div>
             </div>
         </div>
-
     </div>
-    
     <footer>
         <div class="footer">
             <div class="footer-head">
@@ -307,35 +347,29 @@
         </div>
     </footer>
     <script>
-        const productStatusTxt = document.querySelector('.product-status');
-        const remindBtn = document.querySelector('.remind');
-        const buyBtn = document.querySelector('.buy-methods');
-        const productStatus = [1, 0];
-        function remindMethod(status) {
-            if (status === productStatus[0]) {
-                remindBtn.style.display = 'none';
-                buyBtn.style.display = 'block';
-                productStatusTxt.innerText = 'Tình trạng: Còn hàng';
-            } else if (status === productStatus[1]) {
-                remindBtn.style.display = 'block';
-                buyBtn.style.display = 'none';
-                productStatusTxt.innerText = 'Tình trạng: Hết hàng';
-            }
-        }
-        remindMethod(0);
+        const active = 'function-active';
+        const user = document.querySelector('#user');
+        const cart = document.querySelector('#cart');
 
-        let productQuantity = document.querySelector('#product-quantity');
-        function onQuantityChange(btn) {
-            if (btn === 'add') productQuantity.value++;
-            else if (btn === 'rev' && productQuantity.value >= 2) {
-                productQuantity.value--;
-            }
-            productQuantity.innerText = productQuantity;
+        const userInfo = document.querySelector('#user-info');
+        const cartInfo = document.querySelector('#cart-info');
+        const infoFunctions = [user, cart];
+        const infoContents = [userInfo, cartInfo];
+
+        
+        user.onclick = () => {
+            infoContents.map(content => content.style.display = 'none');
+            infoFunctions.map(func => func.classList.remove(active));
+            userInfo.style.display = 'block';
+            user.classList.add(active);
+        }
+        cart.onclick = () => {
+            infoContents.map(content => content.style.display = 'none');
+            infoFunctions.map(func => func.classList.remove(active));
+            cartInfo.style.display = 'block';
+            cart.classList.add(active);
         }
     </script>
-    <script src="./src/js/slider.js"></script>
-    <script src="./src/js/minicart.js"></script>
-    <script src="./src/js/header.js"></script>
 </body>
 
 </html>
