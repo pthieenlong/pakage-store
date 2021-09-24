@@ -1,12 +1,21 @@
+:root {
+    --black-color : #0B0C10;
+    --gray-color: #1F2833;
+    --lightgray-color: #C5C6C7;
+    --lightblue-color: #66FCF1;
+    --darkblue-color: #45A29E;
+}
 footer {
     width: 100%;
+    margin-top: 30px;
     margin-bottom: 25px;
     float: right;
 }
 
 .footer {
     width: 100%;
-    background-color: #ccc;
+    background-color: var(--gray-color);
+    color: var(--lightgray-color);
 }
 .footer-head {
     margin: 0 auto 25px;
@@ -31,6 +40,7 @@ footer {
     text-transform: uppercase;
 }
 .footer-body {
+    /* background-color: lig; */
     display: block;
     margin: 0 auto;
     max-width: 975px;
@@ -41,7 +51,7 @@ footer {
     margin-right: 100px;
 }
 .footer-body-item > p a {
-    color: #21beff;
+    color: var(--lightblue-color);
 }
 .footer-body-item > h3 {
     text-transform: uppercase;

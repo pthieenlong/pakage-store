@@ -1,33 +1,53 @@
+:root {
+    --black-color : #0B0C10;
+    --gray-color: #1F2833;
+    --lightgray-color: #C5C6C7;
+    --lightblue-color: #66FCF1;
+    --darkblue-color: #45A29E;
+}
 .content {
     margin-top: 30px;
 }
 .product {
     height: 350px;
 }
+.product-details > .col-50 > div { 
+    margin: 0 25px;
+}
+.product-details > .col-50:first-child {
+    margin-left: 0 !important;
+}
+.product-details > .col-50:last-child {
+    margin-right: 0 !important;
+}
+.product-detail {
+    /* margin-left: 15px; */
+}
 .product-name {
+    color: var(--lightgray-color);
     text-transform: uppercase;
     font-size: 35px;
 }
 .product-status {
-    color: #aaa;
+    color: var(--lightgray-color);
     margin-bottom: 10px;
 }
 .product-prices {
     width: 100%;
 }
 .product-price {
-    color: red;
+    color: var(--lightblue-color);
     font-size: 26px;
 }
 .presale-price {
-    color: #aaa;
+    color: var(--lightgray-color);
     text-decoration: line-through;
     font-size: 16px;
 }
 .tag-sale {
-    background-color: #FFF0F1;
+    background-color: var(--gray-color);
     opacity: 0.7;
-    border-color: red;
+    border-color: var(--lightblue-color);
     border-radius: 25px;
     font-size: 16px;
 }
@@ -39,16 +59,19 @@
 }
 .product-quantity > span {
     margin-right: 20px;
+    color: var(--lightgray-color);
 }
 .product-quantity > .btn {
     font-size: 16px;
     padding: 10px 15px;
-    background-color: white;
+    background-color: var(--gray-color);
+    color: var(--lightblue-color);
+    border-color: var(--lightblue-color);
     transition: background-color 200ms;
 }
 .btn:hover {
-    background-color: red;
-    color: #000;
+    background-color: var(--lightblue-color);
+    color: var(--gray-color);
 }
 .minus-quantity {
     border-top-left-radius: 15px;
@@ -65,7 +88,9 @@
     border-bottom: 1px solid gray;
 }
 #product-quantity {
-    border: 1px solid gray;
+    border: 1px solid var(--lightblue-color);
+    color: var(--lightblue-color);
+    background-color: var(--gray-color);
     padding: 13px 15px 11px;
     width: 30px;
 }
@@ -74,36 +99,47 @@
 }
 .add-to-cart {
     width: 40%;
+    padding: 15px;
     border-radius: 15px;
-    border: 1px solid green;
-    background-color: lightgreen;
+    border: 1px solid var(--lightblue-color);
+    background-color: var(--gray-color);
+    color: var(--lightblue-color);
+    transition: color 200ms;
+    transition: background-color 200ms;
 }
 .add-to-cart:hover {
-    background-color: green;
-    color: white;
+    background-color: var(--lightblue-color);
+    color:  var(--gray-color);
 }
 .buy-now {
+    padding: 15px;
     width: 40%;
     border-radius: 15px;
-    border: 1px solid rgb(206, 206, 27);
-    background-color: yellow;
+    border: 1px solid var(--lightblue-color);
+    background-color: var(--gray-color);
+    color: var(--lightblue-color);
+    transition: color 200ms;
+    transition: background-color 200ms;
 }
 .buy-now:hover {
-    background-color: rgb(208, 208, 33);
-    color: white;
+    background-color: var(--lightblue-color);
+    color:  var(--gray-color);
 }
 .remind {
     padding: 15px 35px;
     display: block;
     margin: 15px auto;
-    background-color: #4E7EA8;
     border-radius: 15px;
-    color: white;
+    border: 1px solid var(--lightblue-color);
+    background-color: var(--gray-color);
+    color: var(--lightblue-color);
+    transition: color 200ms;
+    transition: background-color 200ms;
 }
 .remind:hover {
     cursor: pointer;
-    background-color: #0b508c;
-    color: white;
+    background-color: var(--lightblue-color);
+    color:  var(--gray-color);
 }
 .slider {
     width: 100%;
@@ -117,8 +153,9 @@
 .banner-btn {
     width: 10%;
     border: none;
-    background-color: white;
+    background-color: var(--black-color);
     margin-top: 15%;
+    color: var(--lightgray-color);
 }
 .banner-btn-left {
     float: left;

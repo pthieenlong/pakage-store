@@ -1,6 +1,13 @@
+:root {
+    --black-color : #0B0C10;
+    --gray-color: #1F2833;
+    --lightgray-color: #C5C6C7;
+    --lightblue-color: #66FCF1;
+    --darkblue-color: #45A29E;
+}
 .content {
     height: 50vh;
-    /* padding-bottom: 15px; */
+    padding-bottom: 50px;
 }
 .user-function {
     width: 25%;
@@ -9,8 +16,9 @@
 .functions {
 }
 .function {
-    background-color: #aaa;
+    background-color: var(--gray-color);
     padding: 15px;
+    color: var(--lightgray-color);
 }
 .function:hover {
     cursor: pointer;
@@ -27,12 +35,14 @@
     font-size: 12px;
 }
 .function-active {
-    background-color: #f7f7f7;
+    background-color: var(--lightgray-color);
+    color: var(--gray-color);
 }
 .user-container {
     float: left;
     max-width: 730px;
-    background-color: #f7f7f7;
+    background-color: var(--lightgray-color);
+    color: var(--gray-color);
 }
 .user-content {
     width: 700px;
@@ -59,22 +69,32 @@
     width: 300px;
     height: 25px;
     padding: 3px 15px;
+    border-radius: 5px;
+    border: 1px solid var(--darkblue-color);
 }
 #edit-btn {
     padding: 15px 55px;
     display: block;
     margin: auto;
-    background-color: #4E7EA8;
+    background-color: var(--darkblue-color);
     border-radius: 15px;
-    color: white;
+    color: var(--gray-color);
+    transition: color 200ms;
+    transition: background-color 200ms;
 }
 #edit-btn:hover {
     cursor: pointer;
-    background-color: #0b508c;
-    color: white;
+    background-color: var(--lightblue-color);
+    color: var(--black-color);
 }
 #cart-info {
     display: none;
+}
+.cart-info-table tr th{
+    border-color: var(--darkblue-color);
+}
+.cart-info-table tr td{
+    border-color: var(--darkblue-color);
 }
 .cart-info-table thead > tr > th {
     padding: 10px 0;
@@ -90,15 +110,20 @@
 }
 .detail-btn {
     padding: 10px;
-    background-color: #4E7EA8;
     color: white;
     border-radius: 5px;
+    color: var(--lightgray-color);
+    background-color: var(--darkblue-color);
+    transition: background-color 200ms;
+    transition: color 200ms;
 }
 .detail-btn:hover {
-    background-color: #0b508c;
+    background-color: var(--lightblue-color);
     cursor: pointer;
+    color: var(--black-color);
 }
 .info-msg {
+    color: var(--gray-color);
     display: none;
     width: 100%;
     font-size: 20px;

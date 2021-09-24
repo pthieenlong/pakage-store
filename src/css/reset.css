@@ -1,3 +1,10 @@
+:root {
+    --black-color : #0B0C10;
+    --gray-color: #1F2833;
+    --lightgray-color: #C5C6C7;
+    --lightblue-color: #66FCF1;
+    --darkblue-color: #45A29E;
+}
 * {
     margin: 0;
     padding: 0;
@@ -14,18 +21,25 @@ a {
 button {
     border: none;
 }
+button:hover {
+    cursor: pointer;
+}
 table, th, td {
-    border: 1px solid black;
+    border: 1px solid var(--lightblue-color);
     border-collapse: collapse;
 }
 hr {
     float: right;
     width: 100%;
     margin-bottom: 20px;
+    border-color: var(--lightblue-color);
 }
 .container {
     max-width: 975px;
     margin: 0 auto;
+}
+body {
+    background-color: var(--black-color);
 }
 .content {
     margin-bottom: 20px;
@@ -35,16 +49,22 @@ hr {
   width: 25%;
 }
 .tag {
-    border: 1px solid #ccc;
+    border: 1px solid var(--lightblue-color);
     position: absolute;
     padding: 5px;
     margin: 0 5px;
 }
+.fa-star {
+    color: var(--gray-color);
+}
 .checked {
-    color: orange;
+    color: var(--darkblue-color);
+}
+.text-left {
+    text-align: left;
 }
 .fa-star:hover {
-    color: yellow;
+    color: var(--darkblue-color);
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {

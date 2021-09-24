@@ -1,3 +1,10 @@
+:root {
+    --black-color : #0B0C10;
+    --gray-color: #1F2833;
+    --lightgray-color: #C5C6C7;
+    --lightblue-color: #66FCF1;
+    --darkblue-color: #45A29E;
+}
 .banner {
     width: 100%;
     margin-top: 50px;
@@ -14,12 +21,21 @@
     height: 60px;
     line-height: 60px;
     text-align: center;
-    border: 1px solid black;
+    border: 1px solid var(--lightblue-color);
     border-bottom: none;
-    background-color: #f7f7f7;
+    background-color: var(--lightgray-color);
+}
+.banner-nav_list-item:hover {
+    background: var(--gray-color);
+}
+.banner-nav_list-item > a {
+    color: var(--gray-color);
+}
+.banner-nav_list-item:hover > a {
+    color: var(--lightgray-color);
 }
 .banner-nav_list-item:last-child {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--lightblue-color);
 }
 .banner-nav_list-item img {
     max-width: 30px;
@@ -31,11 +47,11 @@
 .cate-items {
     display: none;
     position: absolute;
-    left: 185px;
+    left: 184px;
     width: 400px;
     top: -1px;
-    background-color: #f7f7f7;
-    border: 1px solid black;
+    background-color: var(--lightgray-color);
+    border: 1px solid var(--lightblue-color);
     border-left: none;
     z-index: 1;
 }
@@ -46,7 +62,10 @@
     width: 25%;
 }
 .cate-item:hover {
-    background: #ccc;
+    background: var(--gray-color);
+}
+.cate-item:hover > a {
+    color: var(--lightgray-color);
 }
 .banner-advertise {
     display: inline-table;
@@ -64,8 +83,9 @@
 .banner-btn {
     width: 10%;
     border: none;
-    background-color: white;
+    background-color: var(--black-color);
     margin-top: 15%;
+    color: var(--lightblue-color);
 }
 .banner-btn-left {
     float: left;
