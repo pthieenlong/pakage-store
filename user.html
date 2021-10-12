@@ -8,9 +8,7 @@
     <title>Tài khoản</title>
     
     <link rel="stylesheet" href="./src/css/reset.css">
-    <link rel="stylesheet" href="./src/css/footer.css">
-    <link rel="stylesheet" href="./src/css/user.css">
-    <link rel="stylesheet" href="./src/css/header.css">
+    <link rel="stylesheet" href="./src/css/style.css">
     <!-- Importances -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,6 +19,7 @@
 </head>
 
 <body>
+
 
     <div class="modal">
         <div class="modal-content">
@@ -70,8 +69,7 @@
                                 <label for="re-password">Nhập lại mật khẩu:</label>
                                 <div class="input-box">
                                     <i class="fas fa-lock"></i>
-                                    <input type="password" name="re-password" id="re- password"
-                                        placeholder="Mật khẩu ...">
+                                    <input type="password" name="re-password" id="re- password" placeholder="Mật khẩu ...">
                                 </div>
                                 <input type="submit" value="Đăng ký">
                             </form>
@@ -105,7 +103,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>            
     </div>
     <header>
         <div class="header">
@@ -133,16 +131,16 @@
                         <div id="on-stock">
                             <ul class="cart-items">
                                 <li class="cart-item">
-                                    <span class="item-name">product item 12345</span>
-                                    <span class="item-quantity">Số lượng: +99</span>
-                                    <span class="total-price">1,000,000,000 VNĐ</span>
-                                    <a class="btn item-remove" onclick="deleteItem(this)">X</a>
+                                    <span class="cart-item-name">product item 12345</span>
+                                    <span class="cart-item-quantity">Số lượng: +99</span>
+                                    <span class="cart-total-price">1,000,000,000 VNĐ</span>
+                                    <a class="btn cart-item-remove" onclick="deleteItem(this)">X</a>
                                 </li>
                                 <li class="cart-item">
-                                    <span class="item-name">product item 12345</span>
-                                    <span class="item-quantity">Số lượng: +99</span>
-                                    <span class="total-price">1,000,000,000 VNĐ</span>
-                                    <a class="btn item-remove" onclick="deleteItem(this)">X</a>
+                                    <span class="cart-item-name">product item 12345</span>
+                                    <span class="cart-item-quantity">Số lượng: +99</span>
+                                    <span class="cart-total-price">1,000,000,000 VNĐ</span>
+                                    <a class="btn cart-item-remove" onclick="deleteItem(this)">X</a>
                                 </li>
                             </ul>
                             <div class="cart-details">
@@ -175,7 +173,7 @@
                             Không có sản phẩm trong giỏ hàng!
                         </div>
                     </div>
-
+        
                 </div>
             </div>
         </div>
@@ -370,7 +368,7 @@
             cart.classList.add(active);
         }
     </script>
-    <script src="./src/js/header.js"></script>
+    <script src="./src/js/app.js"></script>
 </body>
 
 </html>

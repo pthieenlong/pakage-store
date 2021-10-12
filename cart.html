@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Giỏ hàng</title>
-    <link rel="stylesheet" href="./src/css/cart.css">
+    <link rel="stylesheet" href="./src/css/style.css">
     <link rel="stylesheet" href="./src/css/reset.css">
-    <link rel="stylesheet" href="./src/css/footer.css">
-    <link rel="stylesheet" href="./src/css/header.css">
+    <!-- <link rel="stylesheet" href="./src/css/footer.css">
+    <link rel="stylesheet" href="./src/css/header.css"> -->
     <!-- Importances -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,7 +18,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    
+
     <div class="modal">
         <div class="modal-content">
             <div class="vertical"></div>
@@ -120,7 +120,7 @@
                     </ul>
                 </div>
                 <div class="user-cart">
-                    <a href="#">
+                    <a href="cart.html">
                         <i class="fas fa-shopping-cart"></i>
                         <span>Giỏ hàng</span>
                         <span class="cart-quantity">0</span>
@@ -129,16 +129,16 @@
                         <div id="on-stock">
                             <ul class="cart-items">
                                 <li class="cart-item">
-                                    <span class="item-name">product item 12345</span>
-                                    <span class="item-quantity">Số lượng: +99</span>
-                                    <span class="total-price">1,000,000,000 VNĐ</span>
-                                    <a class="btn item-remove" onclick="deleteItem(this)">X</a>
+                                    <span class="cart-item-name">product item 12345</span>
+                                    <span class="cart-item-quantity">Số lượng: +99</span>
+                                    <span class="cart-total-price">1,000,000,000 VNĐ</span>
+                                    <a class="btn cart-item-remove" onclick="deleteItem(this)">X</a>
                                 </li>
                                 <li class="cart-item">
-                                    <span class="item-name">product item 12345</span>
-                                    <span class="item-quantity">Số lượng: +99</span>
-                                    <span class="total-price">1,000,000,000 VNĐ</span>
-                                    <a class="btn item-remove" onclick="deleteItem(this)">X</a>
+                                    <span class="cart-item-name">product item 12345</span>
+                                    <span class="cart-item-quantity">Số lượng: +99</span>
+                                    <span class="cart-total-price">1,000,000,000 VNĐ</span>
+                                    <a class="btn cart-item-remove" onclick="deleteItem(this)">X</a>
                                 </li>
                             </ul>
                             <div class="cart-details">
@@ -197,367 +197,36 @@
                           <div class="row">
                             <div class="col-1">
                                 <a href="./product.html">
-                                    <img src="./src/img/gta-v.jpeg" alt="hình ảnh sản phẩm" class="product-img">
+                                    <img src="./src/img/gta-v.jpeg" alt="hình ảnh sản phẩm" class="cart-product-img">
                                 </a>
                                 <a href="./product.html">
-                                    <p class="product-name">
+                                    <p class="cart-product-name">
                                         Tên sản phẩm này rất là dài, xin vui lòng xem cho hết nhé các bạn thân yêu
                                       </p>
                                 </a>
-                                <div class="product-status">
+                                <div class="cart-product-status">
                                     Tình trạng: <span class="active">Còn hàng</span>
                                 </div>
                                 </div>
                             <div class="col-2">
-                                <p class="product-price text-left">
+                                <p class="cart-product-price text-left">
                                 100000000 VNĐ</p>
-                                <p class="product-normal-price text-left">1000000 VNĐ</p><span class="sale-tag">- 99%</span>
+                                <p class="cart-product-normal-price text-left">1000000 VNĐ</p><span class="sale-tag">- 99%</span>
                         </div>
-                            <div class="col-3 product-quantity">
+                            <div class="col-3 cart-product-quantity">
                               <button class="btn minus-quantity" onclick="onQuantityChange('rev');">-</button>
-                              <input type="number" name="quantity" id="product-quantity" min="1" value="1">
+                              <input type="number" name="quantity" id="cart-product-quantity" min="1" value="1">
                               <button class="btn add-quantity" onclick="onQuantityChange('add');">+</button>
                             </div>
-                            <div class="col-4"><p class="product-total-price">
+                            <div class="col-4"><p class="cart-product-total-price">
                                 100.000.000.000VNĐ
                             </p></div>
                             <div class="col-5">
-                              <button class="product-remove">
+                              <button class="cart-product-remove">
                                   <i class="fas fa-trash"></i>
                               </button>
                               </div>
                           </div>
-                          <div class="row">
-                            <div class="col-1">
-                                <a href="./product.html">
-                                    <img src="./src/img/gta-v.jpeg" alt="hình ảnh sản phẩm" class="product-img">
-                                </a>
-                                <a href="./product.html">
-                                    <p class="product-name">
-                                        Tên sản phẩm này rất là dài, xin vui lòng xem cho hết nhé các bạn thân yêu
-                                      </p>
-                                </a>
-                                <div class="product-status">
-                                    Tình trạng: <span class="active">Còn hàng</span>
-                                </div>
-                                </div>
-                            <div class="col-2">
-                                <p class="product-price text-left">
-                                100000000 VNĐ</p>
-                                <p class="product-normal-price text-left">1000000 VNĐ</p><span class="sale-tag">- 99%</span>
-                        </div>
-                            <div class="col-3 product-quantity">
-                              <button class="btn minus-quantity" onclick="onQuantityChange('rev');">-</button>
-                              <input type="number" name="quantity" id="product-quantity" min="1" value="1">
-                              <button class="btn add-quantity" onclick="onQuantityChange('add');">+</button>
-                            </div>
-                            <div class="col-4"><p class="product-total-price">
-                                100.000.000.000VNĐ
-                            </p></div>
-                            <div class="col-5">
-                              <button class="product-remove">
-                                  <i class="fas fa-trash"></i>
-                              </button>
-                              </div>
-                          </div>
-                          <div class="row">
-                            <div class="col-1">
-                                <a href="./product.html">
-                                    <img src="./src/img/gta-v.jpeg" alt="hình ảnh sản phẩm" class="product-img">
-                                </a>
-                                <a href="./product.html">
-                                    <p class="product-name">
-                                        Tên sản phẩm này rất là dài, xin vui lòng xem cho hết nhé các bạn thân yêu
-                                      </p>
-                                </a>
-                                <div class="product-status">
-                                    Tình trạng: <span class="active">Còn hàng</span>
-                                </div>
-                                </div>
-                            <div class="col-2">
-                                <p class="product-price text-left">
-                                100000000 VNĐ</p>
-                                <p class="product-normal-price text-left">1000000 VNĐ</p><span class="sale-tag">- 99%</span>
-                        </div>
-                            <div class="col-3 product-quantity">
-                              <button class="btn minus-quantity" onclick="onQuantityChange('rev');">-</button>
-                              <input type="number" name="quantity" id="product-quantity" min="1" value="1">
-                              <button class="btn add-quantity" onclick="onQuantityChange('add');">+</button>
-                            </div>
-                            <div class="col-4"><p class="product-total-price">
-                                100.000.000.000VNĐ
-                            </p></div>
-                            <div class="col-5">
-                              <button class="product-remove">
-                                  <i class="fas fa-trash"></i>
-                              </button>
-                              </div>
-                          </div>
-                          <div class="row">
-                            <div class="col-1">
-                                <a href="./product.html">
-                                    <img src="./src/img/gta-v.jpeg" alt="hình ảnh sản phẩm" class="product-img">
-                                </a>
-                                <a href="./product.html">
-                                    <p class="product-name">
-                                        Tên sản phẩm này rất là dài, xin vui lòng xem cho hết nhé các bạn thân yêu
-                                      </p>
-                                </a>
-                                <div class="product-status">
-                                    Tình trạng: <span class="active">Còn hàng</span>
-                                </div>
-                                </div>
-                            <div class="col-2">
-                                <p class="product-price text-left">
-                                100000000 VNĐ</p>
-                                <p class="product-normal-price text-left">1000000 VNĐ</p><span class="sale-tag">- 99%</span>
-                        </div>
-                            <div class="col-3 product-quantity">
-                              <button class="btn minus-quantity" onclick="onQuantityChange('rev');">-</button>
-                              <input type="number" name="quantity" id="product-quantity" min="1" value="1">
-                              <button class="btn add-quantity" onclick="onQuantityChange('add');">+</button>
-                            </div>
-                            <div class="col-4"><p class="product-total-price">
-                                100.000.000.000VNĐ
-                            </p></div>
-                            <div class="col-5">
-                              <button class="product-remove">
-                                  <i class="fas fa-trash"></i>
-                              </button>
-                              </div>
-                          </div>
-                          <div class="row">
-                            <div class="col-1">
-                                <a href="./product.html">
-                                    <img src="./src/img/gta-v.jpeg" alt="hình ảnh sản phẩm" class="product-img">
-                                </a>
-                                <a href="./product.html">
-                                    <p class="product-name">
-                                        Tên sản phẩm này rất là dài, xin vui lòng xem cho hết nhé các bạn thân yêu
-                                      </p>
-                                </a>
-                                <div class="product-status">
-                                    Tình trạng: <span class="active">Còn hàng</span>
-                                </div>
-                                </div>
-                            <div class="col-2">
-                                <p class="product-price text-left">
-                                100000000 VNĐ</p>
-                                <p class="product-normal-price text-left">1000000 VNĐ</p><span class="sale-tag">- 99%</span>
-                        </div>
-                            <div class="col-3 product-quantity">
-                              <button class="btn minus-quantity" onclick="onQuantityChange('rev');">-</button>
-                              <input type="number" name="quantity" id="product-quantity" min="1" value="1">
-                              <button class="btn add-quantity" onclick="onQuantityChange('add');">+</button>
-                            </div>
-                            <div class="col-4"><p class="product-total-price">
-                                100.000.000.000VNĐ
-                            </p></div>
-                            <div class="col-5">
-                              <button class="product-remove">
-                                  <i class="fas fa-trash"></i>
-                              </button>
-                              </div>
-                          </div>
-                          <div class="row">
-                            <div class="col-1">
-                                <a href="./product.html">
-                                    <img src="./src/img/gta-v.jpeg" alt="hình ảnh sản phẩm" class="product-img">
-                                </a>
-                                <a href="./product.html">
-                                    <p class="product-name">
-                                        Tên sản phẩm này rất là dài, xin vui lòng xem cho hết nhé các bạn thân yêu
-                                      </p>
-                                </a>
-                                <div class="product-status">
-                                    Tình trạng: <span class="active">Còn hàng</span>
-                                </div>
-                                </div>
-                            <div class="col-2">
-                                <p class="product-price text-left">
-                                100000000 VNĐ</p>
-                                <p class="product-normal-price text-left">1000000 VNĐ</p><span class="sale-tag">- 99%</span>
-                        </div>
-                            <div class="col-3 product-quantity">
-                              <button class="btn minus-quantity" onclick="onQuantityChange('rev');">-</button>
-                              <input type="number" name="quantity" id="product-quantity" min="1" value="1">
-                              <button class="btn add-quantity" onclick="onQuantityChange('add');">+</button>
-                            </div>
-                            <div class="col-4"><p class="product-total-price">
-                                100.000.000.000VNĐ
-                            </p></div>
-                            <div class="col-5">
-                              <button class="product-remove">
-                                  <i class="fas fa-trash"></i>
-                              </button>
-                              </div>
-                          </div>
-                          <div class="row">
-                            <div class="col-1">
-                                <a href="./product.html">
-                                    <img src="./src/img/gta-v.jpeg" alt="hình ảnh sản phẩm" class="product-img">
-                                </a>
-                                <a href="./product.html">
-                                    <p class="product-name">
-                                        Tên sản phẩm này rất là dài, xin vui lòng xem cho hết nhé các bạn thân yêu
-                                      </p>
-                                </a>
-                                <div class="product-status">
-                                    Tình trạng: <span class="active">Còn hàng</span>
-                                </div>
-                                </div>
-                            <div class="col-2">
-                                <p class="product-price text-left">
-                                100000000 VNĐ</p>
-                                <p class="product-normal-price text-left">1000000 VNĐ</p><span class="sale-tag">- 99%</span>
-                        </div>
-                            <div class="col-3 product-quantity">
-                              <button class="btn minus-quantity" onclick="onQuantityChange('rev');">-</button>
-                              <input type="number" name="quantity" id="product-quantity" min="1" value="1">
-                              <button class="btn add-quantity" onclick="onQuantityChange('add');">+</button>
-                            </div>
-                            <div class="col-4"><p class="product-total-price">
-                                100.000.000.000VNĐ
-                            </p></div>
-                            <div class="col-5">
-                              <button class="product-remove">
-                                  <i class="fas fa-trash"></i>
-                              </button>
-                              </div>
-                          </div>
-                          <div class="row">
-                            <div class="col-1">
-                                <a href="./product.html">
-                                    <img src="./src/img/gta-v.jpeg" alt="hình ảnh sản phẩm" class="product-img">
-                                </a>
-                                <a href="./product.html">
-                                    <p class="product-name">
-                                        Tên sản phẩm này rất là dài, xin vui lòng xem cho hết nhé các bạn thân yêu
-                                      </p>
-                                </a>
-                                <div class="product-status">
-                                    Tình trạng: <span class="active">Còn hàng</span>
-                                </div>
-                                </div>
-                            <div class="col-2">
-                                <p class="product-price text-left">
-                                100000000 VNĐ</p>
-                                <p class="product-normal-price text-left">1000000 VNĐ</p><span class="sale-tag">- 99%</span>
-                        </div>
-                            <div class="col-3 product-quantity">
-                              <button class="btn minus-quantity" onclick="onQuantityChange('rev');">-</button>
-                              <input type="number" name="quantity" id="product-quantity" min="1" value="1">
-                              <button class="btn add-quantity" onclick="onQuantityChange('add');">+</button>
-                            </div>
-                            <div class="col-4"><p class="product-total-price">
-                                100.000.000.000VNĐ
-                            </p></div>
-                            <div class="col-5">
-                              <button class="product-remove">
-                                  <i class="fas fa-trash"></i>
-                              </button>
-                              </div>
-                          </div>
-                          <div class="row">
-                            <div class="col-1">
-                                <a href="./product.html">
-                                    <img src="./src/img/gta-v.jpeg" alt="hình ảnh sản phẩm" class="product-img">
-                                </a>
-                                <a href="./product.html">
-                                    <p class="product-name">
-                                        Tên sản phẩm này rất là dài, xin vui lòng xem cho hết nhé các bạn thân yêu
-                                      </p>
-                                </a>
-                                <div class="product-status">
-                                    Tình trạng: <span class="active">Còn hàng</span>
-                                </div>
-                                </div>
-                            <div class="col-2">
-                                <p class="product-price text-left">
-                                100000000 VNĐ</p>
-                                <p class="product-normal-price text-left">1000000 VNĐ</p><span class="sale-tag">- 99%</span>
-                        </div>
-                            <div class="col-3 product-quantity">
-                              <button class="btn minus-quantity" onclick="onQuantityChange('rev');">-</button>
-                              <input type="number" name="quantity" id="product-quantity" min="1" value="1">
-                              <button class="btn add-quantity" onclick="onQuantityChange('add');">+</button>
-                            </div>
-                            <div class="col-4"><p class="product-total-price">
-                                100.000.000.000VNĐ
-                            </p></div>
-                            <div class="col-5">
-                              <button class="product-remove">
-                                  <i class="fas fa-trash"></i>
-                              </button>
-                              </div>
-                          </div>
-                          <div class="row">
-                            <div class="col-1">
-                                <a href="./product.html">
-                                    <img src="./src/img/gta-v.jpeg" alt="hình ảnh sản phẩm" class="product-img">
-                                </a>
-                                <a href="./product.html">
-                                    <p class="product-name">
-                                        Tên sản phẩm này rất là dài, xin vui lòng xem cho hết nhé các bạn thân yêu
-                                      </p>
-                                </a>
-                                <div class="product-status">
-                                    Tình trạng: <span class="active">Còn hàng</span>
-                                </div>
-                                </div>
-                            <div class="col-2">
-                                <p class="product-price text-left">
-                                100000000 VNĐ</p>
-                                <p class="product-normal-price text-left">1000000 VNĐ</p><span class="sale-tag">- 99%</span>
-                        </div>
-                            <div class="col-3 product-quantity">
-                              <button class="btn minus-quantity" onclick="onQuantityChange('rev');">-</button>
-                              <input type="number" name="quantity" id="product-quantity" min="1" value="1">
-                              <button class="btn add-quantity" onclick="onQuantityChange('add');">+</button>
-                            </div>
-                            <div class="col-4"><p class="product-total-price">
-                                100.000.000.000VNĐ
-                            </p></div>
-                            <div class="col-5">
-                              <button class="product-remove">
-                                  <i class="fas fa-trash"></i>
-                              </button>
-                              </div>
-                          </div>
-                          <div class="row">
-                            <div class="col-1">
-                                <a href="./product.html">
-                                    <img src="./src/img/gta-v.jpeg" alt="hình ảnh sản phẩm" class="product-img">
-                                </a>
-                                <a href="./product.html">
-                                    <p class="product-name">
-                                        Tên sản phẩm này rất là dài, xin vui lòng xem cho hết nhé các bạn thân yêu
-                                      </p>
-                                </a>
-                                <div class="product-status">
-                                    Tình trạng: <span class="active">Còn hàng</span>
-                                </div>
-                                </div>
-                            <div class="col-2">
-                                <p class="product-price text-left">
-                                100000000 VNĐ</p>
-                                <p class="product-normal-price text-left">1000000 VNĐ</p><span class="sale-tag">- 99%</span>
-                        </div>
-                            <div class="col-3 product-quantity">
-                              <button class="btn minus-quantity" onclick="onQuantityChange('rev');">-</button>
-                              <input type="number" name="quantity" id="product-quantity" min="1" value="1">
-                              <button class="btn add-quantity" onclick="onQuantityChange('add');">+</button>
-                            </div>
-                            <div class="col-4"><p class="product-total-price">
-                                100.000.000.000VNĐ
-                            </p></div>
-                            <div class="col-5">
-                              <button class="product-remove">
-                                  <i class="fas fa-trash"></i>
-                              </button>
-                              </div>
-                          </div>
-
                     </div>
                 </div>
             </div>
@@ -702,5 +371,6 @@
             </div>
         </div>
     </footer>
+    <script src="./src/js/app.js"></script>
 </body>
 </html>

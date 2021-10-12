@@ -7,9 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sản phẩm</title>
     <link rel="stylesheet" href="./src/css/reset.css">
-    <link rel="stylesheet" href="./src/css/footer.css">
-    <link rel="stylesheet" href="./src/css/product.css">
-    <link rel="stylesheet" href="./src/css/header.css">
+    <link rel="stylesheet" href="./src/css/style.css">
     <!-- Importances -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -131,16 +129,16 @@
                         <div id="on-stock">
                             <ul class="cart-items">
                                 <li class="cart-item">
-                                    <span class="item-name">product item 12345</span>
-                                    <span class="item-quantity">Số lượng: +99</span>
-                                    <span class="total-price">1,000,000,000 VNĐ</span>
-                                    <a class="btn item-remove" onclick="deleteItem(this)">X</a>
+                                    <span class="cart-item-name">product item 12345</span>
+                                    <span class="cart-item-quantity">Số lượng: +99</span>
+                                    <span class="cart-total-price">1,000,000,000 VNĐ</span>
+                                    <a class="btn cart-item-remove" onclick="deleteItem(this)">X</a>
                                 </li>
                                 <li class="cart-item">
-                                    <span class="item-name">product item 12345</span>
-                                    <span class="item-quantity">Số lượng: +99</span>
-                                    <span class="total-price">1,000,000,000 VNĐ</span>
-                                    <a class="btn item-remove" onclick="deleteItem(this)">X</a>
+                                    <span class="cart-item-name">product item 12345</span>
+                                    <span class="cart-item-quantity">Số lượng: +99</span>
+                                    <span class="cart-total-price">1,000,000,000 VNĐ</span>
+                                    <a class="btn cart-item-remove" onclick="deleteItem(this)">X</a>
                                 </li>
                             </ul>
                             <div class="cart-details">
@@ -181,10 +179,10 @@
     <div class="container">
         <!-- <hr> -->
         <div class="content">
-            <div class="product">
-                <div class="product-details">
+            <div class="item">
+                <div class="item-details">
                     <div class="col-50">
-                        <div class="product-imgs">
+                        <div class="item-imgs">
                             <div class="banner-advertise">
                                 <button class="banner-btn banner-btn-left" onclick="pushSlides(-1)">
                                     <i class="fas fa-chevron-left fa-3x"></i>
@@ -213,31 +211,31 @@
                        
                     </div>
                     <div class="col-50">
-                        <div class="product-detail">
+                        <div class="item-detail">
 
-                            <h1 class="product-name">
+                            <h1 class="item-name">
                                 Monster Hunter World
                             </h1>
-                            <div class="product-evaluate">
+                            <div class="item-evaluate">
                                 <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star"></span>
                                 <span class="fa fa-star"></span>
                             </div>
-                            <div class="product-status">
+                            <div class="item-status">
                                 <h4>Tình trạng: Còn hàng!</h4>
                             </div>
-                            <div class="product-prices">
-                                <p class="product-price">1,000,000,000 VNĐ
+                            <div class="item-prices">
+                                <p class="item-price">1,000,000,000 VNĐ
                                     <span class="presale-price">999,999,999 VNĐ</span><span class="tag tag-sale">-99%</span>
                                 </p>
                             </div>
                             <hr style="margin-top: 30px;">
-                            <div class="product-quantity">
+                            <div class="item-quantity">
                                 <span>Số lượng:</span>
                                 <button class="btn minus-quantity" onclick="onQuantityChange('rev');">-</button>
-                                <input type="number" name="quantity" id="product-quantity" min="1" value="1">
+                                <input type="number" name="quantity" id="item-quantity" min="1" value="1">
                                 <button class="btn add-quantity" onclick="onQuantityChange('add');">+</button>
                             </div>
                             <div class="buy-methods">
@@ -339,8 +337,7 @@
             productQuantity.innerText = productQuantity;
         }
     </script>
-    <script src="./src/js/slider.js"></script>
-    <script src="./src/js/header.js"></script>
+    <script src="./src/js/app.js"></script>
 </body>
 
 </html>
