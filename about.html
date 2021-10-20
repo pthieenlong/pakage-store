@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/about.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Pakage Store</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-cover">
+        </div>
+        <div class="header-profile">
+            <img src="./src/img/profile.jpeg" alt="profile image">
+            <div class="header-profile-name">
+                <h1>Phạm Thiên Long</h1>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="desc">
+            <div class="col-25">
+                <div class="box contact">
+                    <h3>Contact</h3>
+                    <ul class="contact-list">
+                        <li class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>Ho Chi Minh City, VN
+                        </li>
+                        <li class="contact-item">
+                            <i class="fas fa-phone"></i>0373188242
+                        </li>
+                        <li class="contact-item"><i class="fas fa-envelope"></i><a
+                                href="#">p.thieenlong.304@gmail.com</a></li>
+                        <!-- <li class="contact-item"><i class="fab fa-facebook-square"></i><a href="#">pthieenlong</a></li>
+                        <li class="contact-item"><i class="fab fa-github-square"></i><a href="#">pthieenlong</a></li> -->
+                    </ul>
+                </div>
+            </div>
+            <div class="col-75">
+                <div class="box details">
+                    <h3>Sumary</h3>
+                    <p>I am Pham Thien Long, a back-end developer with a half year experience in Java technologies and
+                        PHP. I have a passionate about learing and reading about technologies.</p>
+                    <p>I am a team-player because I want to work and consult with others to imporve my skills and tasks.
+                    </p>
+                    <p>Besides, I have an high inquisitive spirit that will support a lots for my job.</p>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <nav class="menu">
+                <ul>
+                    <li><button class="btn active" id="skill-btn" onclick="skillTab();">skills</button>
+                    </li>
+                    <li><button class="btn" id="exp-btn" onclick="expTab();">experience</button>
+                    </li>
+                    <li><button class="btn" id="edu-btn" onclick="eduTab();">education</button>
+                    </li>
+                </ul>
+            </nav>
+            <div class="main-content">
+                <div class="skills" id="skill">
+                    <h3>skills</h3>
+                    <div class="skillbox box">
+                        <h4>programming languages</h4>
+                        <ul>
+                            <li>
+                                Java
+                            </li>
+                            <li>
+                                C#
+                            </li>
+                            <li>
+                                Javascript
+                            </li>
+                            <li>
+                                HTML/CSS
+                            </li>
+                            <li>PHP</li>
+                        </ul>
+                    </div>
+                    <div class="skillbox box">
+                        <h4>database</h4>
+                        <ul>
+                            <li>Microsoft SQL</li>
+                            <li>My SQL</li>
+                        </ul>
+                    </div>
+                    <div class="skillbox box">
+                        <h4>version control</h4>
+                        <ul>
+                            <li>Git (Github)</li>
+                            <li>Source Tree</li>
+                        </ul>
+                    </div>
+                    <div class="skillbox box">
+                        <h4>foreign languages</h4>
+                        <ul>
+                            <li>English</li>
+                        </ul>
+                    </div>
+                    <div class="skillbox box">
+                        <h4>knowledge</h4>
+                        <ul>
+                            <li>OOP, Design Pattern</li>
+                            <li>Well understanding RestfulAPI</li>
+                            <li>Trello</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="experiences" id="exp">
+                    <h3>experiences</h3>
+                    <div class="experience-box">
+                        <h4>Latte game</h4>
+                        <em class="time">March 2021 - Septemper 2021</em>
+                        <div class="exp-history">
+                            <p>I've worked Latte Game for 6 months at game developer position. I've learned how to use
+                                trello and how to establish my projects.</p>
+                            <ul>
+                                <li><span class="exp-name">Responsiblities</span> Consult, create a new game with exist
+                                    design. Exchange idea for new game.</li>
+                                <li><span class="exp-name">Technologies</span>Unity/C#
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="experience-box">
+                        <h4>Pet Projects</h4>
+                        <div class="exp-history">
+                            <p>In my free time, I work on some pet projects: <a
+                                    href="https://github.com/pthieenlong">https://github.com/pthieenlong/</a></p>
+                            <ul>
+                                <li>
+                                    <span class="exp-name">Pakage Store</span>an gaming store. <span
+                                        class="tech-use">HTML/CSS/JS</span><span class="git"><a
+                                            href="https://github.com/pthieenlong/pakage-store">Github</a></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="edu" id="edu">
+                    <h3>education</h3>
+                    <div class="edu-box">
+                        <h4>The Degree Of Associate</h4>
+                        <i>FPT Polytechnics</i>
+                        <br>
+                        <em>2020 - 2023</em>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const skill = document.querySelector('#skill');
+        const skillBtn = document.querySelector('#skill-btn');
+        const exp = document.querySelector('#exp');
+        const expBtn = document.querySelector('#exp-btn');
+        const edu = document.querySelector('#edu');
+        const eduBtn = document.querySelector('#edu-btn');
+
+        function skillTab() {
+            skill.style.display = 'block';
+            skillBtn.classList.add('active');
+
+            exp.style.display = 'none';
+            expBtn.classList.remove('active');
+            edu.style.display = 'none';
+            eduBtn.classList.remove('active');
+        }
+        function expTab() {
+            exp.style.display = 'block';
+            expBtn.classList.add('active');
+
+            skill.style.display = 'none';
+            skillBtn.classList.remove('active');
+            edu.style.display = 'none';
+            eduBtn.classList.remove('active');
+        }
+        function eduTab() {
+            edu.style.display = 'block';
+            eduBtn.classList.add('active');
+
+            skill.style.display = 'none';
+            skillBtn.classList.remove('active');
+            exp.style.display = 'none';
+            expBtn.classList.remove('active');
+        }
+    </script>
+</body>
+
+</html>

@@ -39,7 +39,8 @@ hr {
     margin: 0 auto;
 }
 body {
-    background-color: var(--black-color);
+    /* background-color: var(--black-color); */
+    background-image: url(/src/img/background.png);
 }
 .content {
     margin-bottom: 20px;
