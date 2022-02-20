@@ -8,6 +8,8 @@
     <title>Sản phẩm</title>
     <link rel="stylesheet" href="./src/css/reset.css">
     <link rel="stylesheet" href="./src/css/style.css">
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <!-- Importances -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,10 +22,9 @@
 <body>
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v12.0&appId=1303126910149001&autoLogAppEvents=1" nonce="geF2GnV4"></script>
-    <div class="modal">
+    <article class="modal">
         <div class="modal-content">
-            <div class="vertical"></div>
-            <div class="modal-content-head">
+            <section class="modal-content-head">
                 <div class="tabs">
                     <button class="login-tab">Đăng nhập</button>
                     <button class="reg-tab">Đăng ký</button>
@@ -31,9 +32,9 @@
                 <div class="modal-close">
                     &times;
                 </div>
-            </div>
-            <div class="modal-content-body">
-                <div id="reg-tab">
+            </section>
+            <section class="modal-content-body">
+                <article id="reg-tab">
                     <div class="col-50">
                         <div class="tab-body-left">
                             Đăng ký để nhận được nhiều ưu đãi
@@ -74,8 +75,8 @@
                             </form>
                         </div>
                     </div>
-                </div>
-                <div id="login-tab">
+                </article>
+                <article id="login-tab">
                     <div class="col-50">
                         <div class="tab-body-left">
                             Đăng nhập để nhận được nhiều ưu đãi
@@ -100,33 +101,38 @@
                             </form>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>            
-    </div>
+                </article>
+            </section>
+        </div>
+        <section class="modal-background">
+        </section>
+    </article>
     <header>
-        <div class="header">
-            <div class="logo">
+        <article class="header wrapper">
+            <!-- <button class="controls">
+                <i class="fas fa-list"></i>
+            </button> -->
+            <section class="logo">
                 <a href="index.html">
                     <!-- <img src="src/img/logo.png" alt="" class="logo-img"> -->
                     <span class="logo-name">Pakage Store</span>
                 </a>
-            </div>
-            <div class="user">
-                <div class="user-account">
-                    <a href="user.html" class="account-method"><i class="fas fa-user"></i> Tài khoản</a>
+            </section>
+            <section class="user">
+                <article class="user-account">
+                    <a href="user.html" class="account-method"><i class="fas fa-user"></i><span class="cart-inner-txt">Tài khoản</span></a>
                     <ul class="user-methods">
                         <li class="login-method method"><button id="login-btn" class="btn">Đăng nhập</button></li>
                         <li class="reg-method method"><button id="reg-btn" class="btn">Đăng ký</button></li>
                     </ul>
-                </div>
-                <div class="user-cart">
+                </article>
+                <article class="user-cart">
                     <a href="cart.html">
                         <i class="fas fa-shopping-cart"></i>
-                        <span>Giỏ hàng</span>
+                        <span class="cart-inner-txt">Giỏ hàng</span>
                         <span class="cart-quantity">0</span>
                     </a>
-                    <div class="cart-tab">
+                    <article class="cart-tab">
                         <div id="on-stock">
                             <ul class="cart-items">
                                 <li class="cart-item">
@@ -171,17 +177,15 @@
                         <div id="no-product">
                             Không có sản phẩm trong giỏ hàng!
                         </div>
-                    </div>
-        
-                </div>
-            </div>
-        </div>
+                    </article>
+                </article>
+            </section>
+        </article>
     </header>
     <div class="container">
-        <!-- <hr> -->
         <div class="content">
             <div class="item">
-                <div class="item-details">
+                <section class="item-details">
                     <div class="col-50">
                         <div class="item-imgs">
                             <div class="banner-advertise">
@@ -196,16 +200,16 @@
                                 <button class="banner-btn banner-btn-right" onclick="pushSlides(1)">
                                     <i class="fas fa-chevron-right fa-3x"></i>
                                 </button>
-                                <div class="slider-lib">
-                                    <div class="col-25" onclick="currentSlide(1)">
-                                        <img src="./src/img/gta-v.jpeg" alt="" class="lib-img">
-                                    </div>
-                                    <div class="col-25" onclick="currentSlide(2)">
-                                        <img src="./src/img/gta-v.jpeg" alt="" class="lib-img">
-                                    </div>
-                                    <div class="col-25" onclick="currentSlide(3)">
-                                        <img src="./src/img/gta-v.jpeg" alt="" class="lib-img">
-                                    </div>
+                            </div>
+                            <div class="slider-lib">
+                                <div class="col-25" onclick="currentSlide(1)">
+                                    <img src="./src/img/gta-v.jpeg" alt="" class="lib-img">
+                                </div>
+                                <div class="col-25" onclick="currentSlide(2)">
+                                    <img src="./src/img/gta-v.jpeg" alt="" class="lib-img">
+                                </div>
+                                <div class="col-25" onclick="currentSlide(3)">
+                                    <img src="./src/img/gta-v.jpeg" alt="" class="lib-img">
                                 </div>
                             </div>
                         </div>
@@ -247,7 +251,7 @@
                             <div class="fb-like" data-href="http://127.0.0.1:5500/index.html" data-width="" data-layout="button_count" data-action="like" data-size="small" data-share="true" style="margin-top: 25px;"></div>
                         </div>
                     </div>
-                </div>
+                </section>
             </div>
             <hr>
             <div class="comment">
@@ -256,10 +260,9 @@
         </div>
 
     </div>
-    
     <footer>
-        <div class="footer">
-            <div class="footer-head">
+        <section class="footer">
+            <section class="footer-head wrapper">
                 <div class="col-25">
                     <div class="service">
                         <img src="./src/img/service1.png" alt="ten lua">
@@ -288,37 +291,38 @@
                         <p>Hệ thống hỗ trợ online liên tục từ 8h - 24h</p>
                     </div>
                 </div>
-            </div>
-            <div class="footer-body">
-                <div class="footer-body-item">
+            </section>
+            <section class="footer-body">
+                <article class="footer-body-item">
                     <h3>pakage store</h3>
                     <p><a href="#">Game bản quyền là gì?</a></p>
                     <p><a href="./about.html">Giới thiệu Pakage Store</a></p>
                     <p><a href="#">Điều khoản dịch vụ</a></p>
                     <p><a href="#">Chính sách bảo mật</a></p>
                     <p><a href="#">Donate nhân viên CSKH</a></p>
-                </div>
-                <div class="footer-body-item">
+                </article>
+                <article class="footer-body-item">
                     <h3>tài khoản</h3>
                     <p><a href="./cart.html">Giỏ hàng</a></p>
                     <p><a href="#">Đăng kí</a></p>
                     <p><a href="#">Đăng nhập</a></p>
                     <p><a href="#">Sản phẩm đã mua</a></p>
                     <p><a href="#">Chế độ bảo hành</a></p>
-                </div>
-                <div class="footer-body-item">
+                </article>
+                <article class="footer-body-item">
                     <h3>liên hệ</h3>
                     <p><a href="#">Địa chỉ giao dịch trực tiếp</a></p>
                     <p>Hotline: <a href="#">0373 188 242</a> (8:00 - 24:00)</p>
                     <p>Email: <a href="#">longptps19740@fpt.edu.vn</a></p>
                     <p><a href="#">Fanpage</a></p>
-                </div>
-                <div class="footer-body-item">
-                    <div class="fb-page" data-href="https://www.facebook.com/Pakage-Store-100342635784351/" data-tabs="" data-width="" data-height="" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/Pakage-Store-100342635784351/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Pakage-Store-100342635784351/">Pakage Store</a></blockquote></div>
-                </div>
-            </div>
-
-        </div>
+                </article>
+                <article class="footer-body-item">
+                    <div class="fb-page" data-href="https://www.facebook.com/Pakage-Store-100342635784351/" data-tabs="" data-width="" data-height="" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true">
+                        <blockquote cite="https://www.facebook.com/Pakage-Store-100342635784351/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Pakage-Store-100342635784351/">Pakage Store</a></blockquote>
+                    </div>
+                </article>
+            </section>
+        </section>
     </footer>
     <script>
         const productStatusTxt = document.querySelector('.product-status');
